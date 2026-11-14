@@ -1,0 +1,7 @@
+# Proxy subscription sources, one URL per line. Lines starting with # are ignored.
+https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt
+https://raw.githubusercontent.com/pawdroid/Free-servers/main/sub
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity
+https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt
+https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
+https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml
