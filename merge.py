@@ -7,6 +7,7 @@ Outputs (in repo root):
   merged_clash.yaml  - Clash / Clash Meta config
   stats.json         - per-source counts
 """
+import asyncio
 import base64
 import json
 import re
@@ -198,6 +199,92 @@ def uri_to_clash(link: str):
     return None
 
 
+TCP_SCHEMES = ("vmess://", "vless://", "trojan://", "ss://", "ssr://",
+               "socks://", "socks5://")
+UDP_SCHEMES = ("hysteria://", "hysteria2://", "tuic://")
+
+
+def node_host_port(link: str):
+    scheme = link.split("://", 1)[0]
+    try:
+        if scheme == "vmess":
+            j = json.loads(b64decode_loose(link[8:].split("#", 1)[0]).decode())
+            return j.get("add"), int(j.get("port", 0))
+        if scheme == "ss":
+            body = link[5:].split("#", 1)[0]
+            if "@" in body:
+                hostport = body.rsplit("@", 1)[1]
+            else:
+                m = re.match(r"(.+?):(.*)@(.+):(\d+)", b64decode_loose(body).decode())
+                if not m:
+                    return None, None
+                return m.group(3), int(m.group(4))
+            host, port = hostport.rsplit(":", 1)
+            return host, int(port)
+        u = urlparse(link)
+        if not u.hostname or not u.port:
+            return None, None
+        return u.hostname, u.port
+    except Exception:
+        return None, None
+
+
+async def _probe(host, port, timeout, sem):
+    async with sem:
+        try:
+            _, w = await asyncio.wait_for(asyncio.open_connection(host, port), timeout)
+            w.close()
+            try:
+                await w.wait_closed()
+            except Exception:
+                pass
+            return True
+        except Exception:
+            return False
+
+
+def filter_reachable(links, timeout=5.0):
+    """Drop TCP-protocol nodes whose server:port refuses a TCP connect
+    within `timeout` seconds. UDP-only protocols (hysteria/hysteria2/tuic)
+    cannot be probed this way and are kept. Returns (kept, info)."""
+    async def run():
+        sem = asyncio.Semaphore(100)
+        checks = []
+        for i, link in enumerate(links):
+            scheme = link.split("://", 1)[0] + "://"
+            if scheme in UDP_SCHEMES:
+                checks.append((i, "udp"))
+            elif scheme in TCP_SCHEMES:
+                host, port = node_host_port(link)
+                if not host or not port:
+                    checks.append((i, "unparsable"))
+                else:
+                    checks.append((i, ("probe", host, port)))
+            else:
+                checks.append((i, "unparsable"))
+        results = {}
+        for i, kind in checks:
+            if isinstance(kind, tuple):
+                _, host, port = kind
+                results[i] = await _probe(host, port, timeout, sem)
+        return checks, results
+    checks, results = asyncio.run(run())
+    kept, info = [], {"kept": 0, "dead": 0, "udp_kept": 0, "unparsable": 0}
+    for i, kind in checks:
+        if kind == "udp":
+            kept.append(links[i])
+            info["udp_kept"] += 1
+        elif kind == "unparsable":
+            info["unparsable"] += 1
+        elif results.get(i):
+            kept.append(links[i])
+            info["kept"] += 1
+        else:
+            info["dead"] += 1
+    info["kept"] += info["udp_kept"]
+    return kept, info
+
+
 def main():
     import yaml
     sources = [ln.strip() for ln in (ROOT / "sources.txt").read_text().splitlines()
@@ -237,6 +324,11 @@ def main():
             continue
         seen.add(k)
         unique.append(link)
+    unique, reach = filter_reachable(unique)
+    stats["reachable"] = reach["kept"]
+    stats["filtered_unreachable"] = reach["dead"]
+    stats["udp_kept_unfiltered"] = reach["udp_kept"]
+    stats["unparsable_removed"] = reach["unparsable"]
     plain = "\n".join(unique) + "\n"
     (ROOT / "merged.txt").write_text(plain)
     (ROOT / "merged_base64.txt").write_text(base64.b64encode(plain.encode()).decode())
