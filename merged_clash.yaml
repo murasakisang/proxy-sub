@@ -5,6 +5,31 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+- name: 🇩🇪[openproxylist.com] vless-DE
+  type: vless
+  server: 46.243.205.192
+  port: 443
+  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
+  encryption: none
+  tls: true
+  servername: 46.243.205.192
+  network: ws
+  ws-opts:
+    path: /catalog/feed/H9eui7WsW3xS
+    headers:
+      Host: 46.243.205.192
+- name: 🏳[openproxylist.com] vmess-
+  type: vmess
+  server: www.true.th
+  port: 80
+  uuid: 64b4f468-93af-451f-a721-171a2e9f314d
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /myo
+    headers:
+      Host: d1g0jlrlppl8b0.cloudfront.net
 - name: 🇸🇪[openproxylist.com] vless-SE
   type: vless
   server: lodizu.hagrid-connected.com
@@ -20,76 +45,6 @@ proxies:
   port: 443
   password: poimnap
   sni: alireza.karamoz1.ir
-- name: 🇹🇷[openproxylist.com] vless-TR
-  type: vless
-  server: 13.143.197.74
-  port: 8443
-  uuid: 12910384-1ef8-40a3-818a-57277063ea66
-  encryption: none
-  tls: true
-  servername: kk-tr-74.testkknegr.online
-- name: 🇧🇷[openproxylist.com] vmess-BR
-  type: vmess
-  server: 103.14.27.207
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  network: tcp
-- name: 🇺🇸[openproxylist.com] ss-US
-  type: ss
-  server: 48.103.218.241
-  port: 18443
-  cipher: aes-256-gcm
-  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
-- name: 🇪🇸[openproxylist.com] vless-ES
-  type: vless
-  server: 94.183.234.245
-  port: 443
-  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
-  encryption: none
-  flow: xtls-rprx-vision
-- name: 🇭🇰[openproxylist.com] vless-HK
-  type: vless
-  server: free.fugui.lol
-  port: 47396
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-  encryption: none
-  flow: xtls-rprx-vision
-- name: 🇩🇪[openproxylist.com] vless-DE
-  type: vless
-  server: 87.242.94.42
-  port: 443
-  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
-  encryption: none
-  tls: true
-  servername: 87.242.94.42
-  network: ws
-  ws-opts:
-    path: /cart/sync/iJa-_8Pi4FjK
-    headers:
-      Host: 87.242.94.42
-- name: 🇫🇷[openproxylist.com] ss-FR
-  type: ss
-  server: 107.161.160.28
-  port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
-- name: 🇫🇮[openproxylist.com] vless-FI
-  type: vless
-  server: 104.17.145.145
-  port: 2083
-  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
-  encryption: none
-  tls: true
-  servername: vipfree.dr-ping.ir
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: vipfree.dr-ping.ir
 - name: 🇮🇹[openproxylist.com] ss-IT
   type: ss
   server: 57.131.27.21
@@ -117,19 +72,26 @@ proxies:
   tls: true
   servername: 146.19.254.171
   flow: xtls-rprx-vision
-- name: 🇸🇪[openproxylist.com] vless-SE-1
+- name: 🏳[openproxylist.com] vless--1
   type: vless
-  server: 88.216.60.73
+  server: freev2.cloudflare.182682.xyz
   port: 443
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  uuid: d38b03c3-ff14-4ee0-80de-cd089f84ee38
   encryption: none
-- name: 🏳[openproxylist.com] trojan-
+  tls: true
+  servername: ap-south.862400.xyz
+  network: ws
+  ws-opts:
+    path: /announcement?ed=2048fp=chrome
+    headers:
+      Host: ap-south.862400.xyz
+- name: 🇭🇰[openproxylist.com] trojan-HK
   type: trojan
   server: 47.242.93.89
   port: 12012
   password: '12012'
   sni: ali-hk.b-gfw.cfd
-- name: 🇺🇸[openproxylist.com] vmess-US
+- name: 🏳[openproxylist.com] vmess--1
   type: vmess
   server: 192.74.236.148
   port: 30004
@@ -150,31 +112,12 @@ proxies:
   encryption: none
   tls: true
   servername: kk-ru24a1.testkknegr.online
-- name: 🏳[openproxylist.com] vmess-
-  type: vmess
-  server: 23.165.200.150
-  port: 52080
-  uuid: 672cdade-bb05-4c86-b578-e5d09b79524a
-  alterId: 0
-  cipher: auto
-  network: tcp
 - name: 🇳🇱[openproxylist.com] ss-NL-1
   type: ss
   server: 194.87.233.93
   port: 46190
   cipher: chacha20-ietf-poly1305
   password: 2Ef8X21WALqK7H6N8A78j5WYtzZ999PP8rF8DaLsb5LLyDLQpf5dGVAjdA3mj1wudigKXTt5heYU9jmaBbfxXBJJAqhPHkxe
-- name: 🇨🇦[openproxylist.com] vless-CA
-  type: vless
-  server: 104.18.109.147
-  port: 2052
-  uuid: c29d39bd-92a4-45db-bb61-56013998617c
-  encryption: none
-  network: ws
-  ws-opts:
-    path: /Telegram-XV2ry2?ed=2048
-    headers:
-      Host: www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com
 - name: 🇷🇺[openproxylist.com] vless-RU-1
   type: vless
   server: 201.24.116.192
@@ -183,68 +126,44 @@ proxies:
   encryption: none
   tls: true
   servername: vps3.nemnogogo.com
-- name: 🇧🇷[openproxylist.com] vmess-BR-1
-  type: vmess
-  server: 103.88.232.55
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: xmfhlpy.com
-  network: tcp
-- name: 🇫🇮[openproxylist.com] ss-FI
-  type: ss
-  server: 213.176.92.148
-  port: 40647
-  cipher: aes-256-gcm
-  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
 - name: 🇭🇰[openproxylist.com] ss-HK
   type: ss
   server: 209.248.57.105
   port: 8388
   cipher: aes-256-gcm
   password: AMok40FfaM+Ikwre16psBpVk6JHxsQZw
+- name: 🇩🇪[openproxylist.com] vless-DE-1
+  type: vless
+  server: bookend.filnex.baby
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: hollowreed.gerqix.online
+  network: ws
+  ws-opts:
+    path: /api/de1/stream
+    headers:
+      Host: bookend.filnex.baby
 - name: 🇬🇧[openproxylist.com] ss-GB
   type: ss
   server: 54.37.240.40
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: 8nrpt2il04ptci2j
-- name: 🏳[openproxylist.com] vless--1
-  type: vless
-  server: 196.196.149.80
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  encryption: none
-  flow: xtls-rprx-vision
-- name: 🇰🇷[openproxylist.com] trojan-KR
+- name: 🏳[openproxylist.com] trojan-
   type: trojan
   server: 158.247.253.243
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-- name: 🏳[openproxylist.com] ss-
-  type: ss
-  server: 135.220.178.46
-  port: 46303
-  cipher: chacha20-ietf-poly1305
-  password: zZMNTGpPl38ASlbI1EKOBJ
-- name: 🇺🇸[openproxylist.com] ss-US-1
+- name: 🇺🇸[openproxylist.com] ss-US
   type: ss
   server: 23.230.52.119
   port: 42878
   cipher: chacha20-ietf-poly1305
   password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
-- name: 🇳🇱[openproxylist.com] vless-NL-1
-  type: vless
-  server: 194.60.228.97
-  port: 443
-  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
-  encryption: none
-  tls: true
-  servername: base.hosamobenl.co.uk
-- name: 🏳[openproxylist.com] vless--2
+- name: 🇸🇬[openproxylist.com] vless-SG
   type: vless
   server: 207.148.124.12
   port: 8443
@@ -258,25 +177,25 @@ proxies:
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹[openproxylist.com] ss-IT-2
+- name: 🏳[openproxylist.com] ss-
   type: ss
   server: 202.50.253.36
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹[openproxylist.com] ss-IT-3
+- name: 🇮🇹[openproxylist.com] ss-IT-2
   type: ss
   server: 202.50.253.81
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹[openproxylist.com] ss-IT-4
+- name: 🇮🇹[openproxylist.com] ss-IT-3
   type: ss
   server: 202.50.253.63
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🏳[openproxylist.com] ss--1
+- name: 🇮🇹[openproxylist.com] ss-IT-4
   type: ss
   server: 202.50.253.99
   port: 19999
@@ -288,31 +207,31 @@ proxies:
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹[openproxylist.com] ss-IT-6
+- name: 🏳[openproxylist.com] ss--1
   type: ss
   server: 202.50.253.45
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹[openproxylist.com] ss-IT-7
+- name: 🇮🇹[openproxylist.com] ss-IT-6
   type: ss
   server: 202.50.253.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹[openproxylist.com] ss-IT-8
+- name: 🏳[openproxylist.com] ss--2
   type: ss
   server: 202.50.253.27
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇮🇹[openproxylist.com] ss-IT-9
+- name: 🇮🇹[openproxylist.com] ss-IT-7
   type: ss
   server: 202.50.253.54
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🏳[openproxylist.com] ss--2
+- name: 🇳🇱[openproxylist.com] ss-NL-2
   type: ss
   server: 156.67.120.205
   port: 51628
@@ -324,38 +243,19 @@ proxies:
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: exploredigitaljobplatformandfindonlinework.com
-- name: 🇺🇸[openproxylist.com] ss-US-2
+- name: 🇺🇸[openproxylist.com] ss-US-1
   type: ss
   server: 149.40.57.134
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🏳[openproxylist.com] vless--3
-  type: vless
-  server: 5.83.129.236
-  port: 443
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-  encryption: none
-  tls: true
-  servername: host-de-upscale.cdn.cachefleet.com
-- name: 🇨🇦[openproxylist.com] vless-CA-1
-  type: vless
-  server: 104.26.13.31
-  port: 8080
-  uuid: 3e06b1db-2efb-446e-ba2d-68850dfd2f9d
-  encryption: none
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: bdfba-cool-tree-b580.v8fz4kbv.workers.dev
-- name: 🇳🇱[openproxylist.com] ss-NL-2
+- name: 🇳🇱[openproxylist.com] ss-NL-3
   type: ss
   server: 77.221.132.206
   port: 24759
   cipher: chacha20-ietf-poly1305
   password: hCgbUnMaoAfSgvE8IKdnGu
-- name: 🇺🇸[openproxylist.com] ss-US-3
+- name: 🏳[openproxylist.com] ss--3
   type: ss
   server: 38.91.107.188
   port: 19999
@@ -367,13 +267,13 @@ proxies:
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷[openproxylist.com] ss-FR-1
+- name: 🇫🇷[openproxylist.com] ss-FR
   type: ss
   server: 23.162.152.22
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪[openproxylist.com] ss-DE
+- name: 🏳[openproxylist.com] ss--4
   type: ss
   server: 57.129.83.85
   port: 19999
@@ -397,7 +297,7 @@ proxies:
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸[openproxylist.com] ss-US-4
+- name: 🇺🇸[openproxylist.com] ss-US-2
   type: ss
   server: 23.150.152.38
   port: 19999
@@ -409,55 +309,73 @@ proxies:
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🏳[openproxylist.com] ss--5
+  type: ss
+  server: 167.88.63.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇸🇪[openproxylist.com] ss-SE
   type: ss
   server: 138.199.55.243
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🏳[openproxylist.com] ss--3
+- name: 🏳[openproxylist.com] ss--6
   type: ss
   server: 15.235.164.133
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪[openproxylist.com] ss-DE-1
+- name: 🏳[openproxylist.com] ss--7
   type: ss
   server: 193.108.119.3
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇬[openproxylist.com] ss-SG-2
+- name: 🏳[openproxylist.com] ss--8
   type: ss
   server: 149.88.106.74
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷[openproxylist.com] ss-FR-2
+- name: 🇺🇸[openproxylist.com] ss-US-3
+  type: ss
+  server: 162.251.62.31
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸[openproxylist.com] ss-US-4
+  type: ss
+  server: 137.184.89.151
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇷[openproxylist.com] ss-FR-1
   type: ss
   server: 38.109.228.110
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇨🇭[openproxylist.com] ss-CH-1
+- name: 🏳[openproxylist.com] ss--9
   type: ss
   server: 186.190.215.251
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇬[openproxylist.com] ss-SG-3
+- name: 🇸🇬[openproxylist.com] ss-SG-2
   type: ss
   server: 149.88.107.74
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧[openproxylist.com] ss-GB-3
+- name: 🏳[openproxylist.com] ss--10
   type: ss
   server: 142.202.51.22
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷[openproxylist.com] ss-FR-3
+- name: 🇫🇷[openproxylist.com] ss-FR-2
   type: ss
   server: 167.17.64.27
   port: 19999
@@ -469,7 +387,7 @@ proxies:
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷[openproxylist.com] ss-FR-4
+- name: 🇫🇷[openproxylist.com] ss-FR-3
   type: ss
   server: 172.99.189.142
   port: 19999
@@ -481,55 +399,61 @@ proxies:
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇨🇭[openproxylist.com] ss-CH-2
+- name: 🏳[openproxylist.com] ss--11
   type: ss
   server: 79.127.184.104
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇫🇷[openproxylist.com] ss-FR-5
+- name: 🇫🇷[openproxylist.com] ss-FR-4
   type: ss
   server: 167.17.64.175
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪[openproxylist.com] ss-DE-2
+- name: 🇩🇪[openproxylist.com] ss-DE
   type: ss
   server: 23.157.88.43
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪[openproxylist.com] ss-DE-3
+- name: 🏳[openproxylist.com] ss--12
   type: ss
   server: 193.108.119.2
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🏳[openproxylist.com] ss--4
+- name: 🇪🇸[openproxylist.com] ss-ES-2
   type: ss
   server: 79.127.139.242
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧[openproxylist.com] ss-GB-4
+- name: 🇬🇧[openproxylist.com] ss-GB-3
   type: ss
   server: 38.114.120.221
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇬[openproxylist.com] ss-SG-4
+- name: 🇸🇬[openproxylist.com] ss-SG-3
   type: ss
   server: 149.88.107.47
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🏳[openproxylist.com] ss--5
+- name: 🇫🇷[openproxylist.com] ss-FR-5
   type: ss
   server: 167.17.64.22
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇸🇪[openproxylist.com] vless-SE-2
+- name: 🇺🇸[openproxylist.com] ss-US-5
+  type: ss
+  server: 38.22.17.129
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🏳[openproxylist.com] vless--2
   type: vless
   server: 138.124.86.230
   port: 48115
@@ -537,94 +461,58 @@ proxies:
   encryption: none
   tls: true
   servername: 138-124-86-230.sslip.io
-- name: 🏳[openproxylist.com] trojan--1
-  type: trojan
-  server: 66.163.127.215
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
 - name: 🇦🇹[openproxylist.com] ss-AT
   type: ss
   server: 152.53.1.57
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-- name: 🏳[openproxylist.com] ss--6
+- name: 🇳🇱[openproxylist.com] ss-NL-4
   type: ss
   server: 151.241.19.36
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🏳[openproxylist.com] ss--7
+- name: 🏳[openproxylist.com] ss--13
   type: ss
   server: 151.241.19.29
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇪🇪[openproxylist.com] vless-EE
-  type: vless
-  server: 45.86.60.174
-  port: 16443
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
-  encryption: none
-- name: 🏳[openproxylist.com] trojan--2
+- name: 🇳🇱[openproxylist.com] trojan-NL
   type: trojan
   server: 66.163.127.225
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: cdn.indyourperfectremotetechjobfromthecomfortofhome.com
+- name: 🏳[openproxylist.com] trojan--1
+  type: trojan
+  server: 167.88.61.52
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
+- name: 🇺🇸[openproxylist.com] trojan-US
+  type: trojan
+  server: 167.88.61.175
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.browseseniorrolesandenhanceyourcareertoday.com
 - name: 🇨🇭[openproxylist.com] trojan-CH
   type: trojan
   server: 208.69.78.158
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-- name: 🏳[openproxylist.com] trojan--3
-  type: trojan
-  server: 208.69.78.33
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.yourultimateprofessionalcareerhub.com
-- name: 🇨🇦[openproxylist.com] trojan-CA
-  type: trojan
-  server: 216.152.147.152
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-- name: 🏳[openproxylist.com] trojan--4
-  type: trojan
-  server: 216.152.147.74
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: 🇰🇷[openproxylist.com] vmess-KR
+  type: vmess
+  server: 129.154.61.196
+  port: 800
+  uuid: a915b1d6-cf28-4dc8-e4b4-e09c48c37ec0
+  alterId: 0
+  cipher: auto
+  network: tcp
 - name: 🇩🇪[openproxylist.com] trojan-DE-1
   type: trojan
-  server: 193.108.119.96
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.iloverussia2026.com
-- name: 🏳[openproxylist.com] trojan--5
-  type: trojan
-  server: 216.152.147.79
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: blog.connectingpeoplewithgreatjobs.com
-- name: 🇨🇦[openproxylist.com] trojan-CA-1
-  type: trojan
-  server: 216.152.147.93
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: connectingpeoplewithgreatjobs.com
-- name: 🇩🇪[openproxylist.com] trojan-DE-2
-  type: trojan
   server: 193.108.119.78
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-- name: 🏳[openproxylist.com] trojan--6
-  type: trojan
-  server: 193.108.119.15
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.iloverussia2026.com
-- name: 🇪🇸[openproxylist.com] trojan-ES
-  type: trojan
-  server: 66.163.118.203
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
 - name: 🇦🇺[openproxylist.com] trojan-AU
@@ -633,23 +521,13 @@ proxies:
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: connectwithemployerstohireyouridealteam.com
-- name: 🇪🇸[openproxylist.com] trojan-ES-1
-  type: trojan
-  server: 66.163.118.244
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-- name: 🇪🇸[openproxylist.com] trojan-ES-2
-  type: trojan
-  server: 66.163.118.40
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-- name: 🇺🇸[openproxylist.com] trojan-US
+- name: 🇺🇸[openproxylist.com] trojan-US-1
   type: trojan
   server: 66.163.112.13
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
   sni: blog.unlockyourfuturefindyourperfectcareer.com
-- name: 🏳[openproxylist.com] vless--4
+- name: 🇰🇷[openproxylist.com] vless-KR
   type: vless
   server: 152.69.226.63
   port: 25555
@@ -658,24 +536,14 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🏳[openproxylist.com] vless--5
+- name: 🏳[openproxylist.com] vless--3
   type: vless
-  server: 178.172.227.228
-  port: 14430
-  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
+  server: 5.34.177.164
+  port: 443
+  uuid: ca678d26-5435-4d13-b378-06c4c3b070ff
   encryption: none
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 178.172.227.228
-- name: 🇻🇳[openproxylist.com] vless-VN
-  type: vless
-  server: 150.95.109.109
-  port: 2086
-  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
-  encryption: none
-- name: 🇫🇷[openproxylist.com] vless-FR
+  flow: xtls-rprx-vision
+- name: 🏳[openproxylist.com] vless--4
   type: vless
   server: 138.124.70.41
   port: 14430
@@ -686,43 +554,19 @@ proxies:
     path: /vless
     headers:
       Host: 138.124.70.41
-- name: 🏳[openproxylist.com] vless--6
-  type: vless
-  server: free-config-bot-development-33s35.lucity.app
-  port: 443
-  uuid: 474c5a2e-96eb-fa3f-6639-cbd2129c8027
-  encryption: none
-  tls: true
-  servername: free-config-bot-development-33s35.lucity.app
-  network: ws
-  ws-opts:
-    path: /ws/474c5a2e-96eb-fa3f-6639-cbd2129c8027
-    headers:
-      Host: free-config-bot-development-33s35.lucity.app
-- name: 🇬🇧[openproxylist.com] ss-GB-5
+- name: 🇬🇧[openproxylist.com] ss-GB-4
   type: ss
   server: 185.176.206.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇧🇾[openproxylist.com] vless-BY
+- name: 🏳[openproxylist.com] vless--5
   type: vless
   server: 178.172.227.124
   port: 10443
   uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
   encryption: none
-- name: 🇮🇳[openproxylist.com] vless-IN
-  type: vless
-  server: 13.140.56.100
-  port: 14430
-  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
-  encryption: none
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: 13.140.56.100
-- name: 🏳[openproxylist.com] vless--7
+- name: 🏳[openproxylist.com] vless--6
   type: vless
   server: 5.178.109.174
   port: 14430
@@ -733,7 +577,7 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
-- name: 🇫🇮[openproxylist.com] vless-FI-1
+- name: 🇫🇮[openproxylist.com] vless-FI
   type: vless
   server: 45.144.234.157
   port: 14430
@@ -755,83 +599,57 @@ proxies:
     path: /vless
     headers:
       Host: 95.174.68.188
-- name: 🇮🇹[openproxylist.com] ss-IT-10
+- name: 🇮🇹[openproxylist.com] ss-IT-8
   type: ss
   server: 185.164.175.81
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸[openproxylist.com] vmess-US-1
-  type: vmess
-  server: 104.17.136.198
-  port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-  network: ws
-  ws-opts:
-    path: /ws?ed=2048
-    headers:
-      Host: vmess.lbw666.dpdns.org
-- name: 🏳[openproxylist.com] ss--8
+- name: 🏳[openproxylist.com] ss--14
   type: ss
   server: 82.110.60.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🏳[openproxylist.com] vmess--1
-  type: vmess
-  server: 104.16.0.1
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
+- name: 🇷🇺[openproxylist.com] vless-RU-2
+  type: vless
+  server: xssite.webredirect.org
+  port: 443
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  encryption: none
   tls: true
-  servername: or3.sfacg.uk
-  network: ws
-  ws-opts:
-    path: /or3
-    headers:
-      Host: or3.sfacg.uk
+  servername: xssite.webredirect.org
+- name: 🇳🇱[openproxylist.com] ss-NL-5
+  type: ss
+  server: 82.38.31.46
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
 - name: 🇲🇽[openproxylist.com] ss-MX
   type: ss
   server: 64.177.90.30
   port: 8388
   cipher: aes-256-gcm
   password: BWyPPTusFKhGgzKh
-- name: 🏳[openproxylist.com] ss--9
+- name: 🇨🇦[openproxylist.com] ss-CA
   type: ss
   server: 51.222.141.125
   port: 445
   cipher: aes-256-gcm
   password: zDNVedRFPQexG9v
-- name: 🇨🇦[openproxylist.com] ss-CA
-  type: ss
-  server: 51.79.85.185
-  port: 8118
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
 - name: 🇨🇦[openproxylist.com] ss-CA-1
-  type: ss
-  server: 51.222.200.165
-  port: 5000
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇨🇦[openproxylist.com] ss-CA-2
   type: ss
   server: 51.222.136.236
   port: 8882
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
-- name: 🇨🇦[openproxylist.com] ss-CA-3
+- name: 🇨🇦[openproxylist.com] ss-CA-2
   type: ss
   server: 15.235.121.109
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: 575hiopq2h28yao6
-- name: 🇮🇹[openproxylist.com] ss-IT-11
+- name: 🏳[openproxylist.com] ss--15
   type: ss
   server: 57.131.4.13
   port: 8080
@@ -842,96 +660,101 @@ proxies:
   server: 47.250.84.25
   port: 443
   password: 5931134d1cde66bf83a54acdfebe7ab2
-- name: 🇨🇦[openproxylist.com] ss-CA-4
-  type: ss
-  server: 51.222.155.113
-  port: 5601
-  cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-- name: 🇨🇦[openproxylist.com] ss-CA-5
-  type: ss
-  server: 51.222.155.32
-  port: 5003
-  cipher: aes-256-gcm
-  password: g5MeD6Ft3CWlJId
-- name: 🏳[openproxylist.com] ss--10
+- name: 🇱🇻[openproxylist.com] vless-LV
+  type: vless
+  server: 138.124.180.137
+  port: 443
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+  encryption: none
+  flow: xtls-rprx-vision
+- name: 🇯🇵[openproxylist.com] ss-JP
   type: ss
   server: 84.247.155.196
   port: 80
   cipher: aes-256-gcm
   password: 3eOFeNssde7PYYMv
-- name: 🇬🇧[openproxylist.com] vless-GB
+- name: 🇺🇸[openproxylist.com] vless-US
   type: vless
-  server: node-uk.connectsuite.org
-  port: 8443
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  server: sparkling-gadabout.quick-cdn.net
+  port: 443
+  uuid: ec5bf19c-9eb0-410e-a3de-17b6befd09f1
   encryption: none
   tls: true
-  servername: node-uk.connectsuite.org
-- name: 🇨🇦[openproxylist.com] ss-CA-6
+  servername: sparkling-gadabout.quick-cdn.net
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: sparkling-gadabout.quick-cdn.net
+- name: 🇨🇦[openproxylist.com] ss-CA-3
   type: ss
   server: 51.222.12.127
   port: 445
   cipher: aes-256-gcm
   password: zDNVedRFPQexG9v
-- name: 🏳[openproxylist.com] ss--11
+- name: 🏳[openproxylist.com] ss--16
   type: ss
   server: 130.49.189.158
   port: 43558
   cipher: chacha20-ietf-poly1305
   password: LNc9h/4NA9Q6ZHNeYHoT5X/fR9aoE9KQR1SWhVDHBog=
-- name: 🇬🇧[openproxylist.com] ss-GB-6
+- name: 🇳🇱[openproxylist.com] ss-NL-6
+  type: ss
+  server: 82.38.31.181
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🏳[openproxylist.com] ss--17
+  type: ss
+  server: 82.38.31.203
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🏳[openproxylist.com] ss--18
   type: ss
   server: 158.173.24.73
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇨🇦[openproxylist.com] vmess-CA
-  type: vmess
-  server: 134.195.196.211
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: 🇯🇵[openproxylist.com] vmess-JP
-  type: vmess
-  server: 168.138.43.75
-  port: 80
-  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
-  alterId: 0
-  cipher: auto
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: None
-- name: 🏳[openproxylist.com] ss--12
+- name: 🇰🇿[openproxylist.com] vless-KZ
+  type: vless
+  server: 109.248.170.119
+  port: 13447
+  uuid: b573cefb-7bc7-4a42-b407-b8b534e66773
+  encryption: none
+- name: 🏳[openproxylist.com] ss--19
   type: ss
   server: 102.37.156.224
   port: 443
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
-- name: 🏳[openproxylist.com] ss--13
+- name: 🇿🇦[openproxylist.com] ss-ZA
   type: ss
   server: 102.133.165.160
   port: 16233
   cipher: chacha20-ietf-poly1305
   password: Xsy8Ox4yOV3xLlpxtjzs3X
-- name: 🇺🇸[openproxylist.com] vmess-US-2
+- name: 🇫🇷[openproxylist.com] vless-FR
+  type: vless
+  server: 62.210.91.10
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  encryption: none
+  flow: xtls-rprx-vision
+- name: 🇰🇷[openproxylist.com] vmess-KR-1
   type: vmess
-  server: 104.17.77.77
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  server: seoul02.zgjok.com
+  port: 443
+  uuid: 1a1e5196-eab4-4772-9012-65c27f19a524
   alterId: 0
-  cipher: none
+  cipher: auto
   tls: true
-  servername: v2ray1.dozapp.xyz
+  servername: seoul02.zgjok.com
   network: ws
   ws-opts:
-    path: /lMnsZUN4/
+    path: /
     headers:
-      Host: v2ray1.dozapp.xyz
+      Host: seoul02.zgjok.com
 - name: 🇫🇷[openproxylist.com] vless-FR-1
   type: vless
   server: ov-france1.09vpn.com
@@ -943,532 +766,637 @@ proxies:
     path: /vless/
     headers:
       Host: ov-france1.09vpn.com
-- name: 🇬🇧[openproxylist.com] ss-GB-7
+- name: 🇬🇧[openproxylist.com] ss-GB-5
   type: ss
   server: 94.156.250.148
   port: 7001
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
-- name: 🇳🇴[openproxylist.com] ss-NO
+- name: 🏳[openproxylist.com] ss--20
   type: ss
   server: 185.213.23.63
   port: 990
   cipher: chacha20-ietf-poly1305
   password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-- name: 🇯🇵[openproxylist.com] ss-JP
+- name: 🇩🇪[openproxylist.com] vless-DE-2
+  type: vless
+  server: quay.gerqix.online
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: quay.gerqix.online
+  network: ws
+  ws-opts:
+    path: /api/de2/stream
+    headers:
+      Host: quay.gerqix.online
+- name: 🏳[openproxylist.com] ss--21
+  type: ss
+  server: 90.156.203.62
+  port: 5112
+  cipher: chacha20-ietf-poly1305
+  password: VVlAff77CnAU43Aoc5j15Y
+- name: 🏳[openproxylist.com] vmess--2
+  type: vmess
+  server: 47.244.120.197
+  port: 36703
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /arki
+- name: 🏳[openproxylist.com] ss--22
   type: ss
   server: 149.22.87.204
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 香港+阿里云
-  type: ss
-  server: 47.85.162.44
-  port: 443
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA=
-- name: 波兰+V2CROSS.COM
-  type: trojan
-  server: sclass-00.catcat321.com
-  port: 20123
-  password: d9064589-74af-432a-9390-5d8a9da281bf
-  sni: hk.catxstar.com
-- name: 西班牙+V2CROSS.COM
-  type: vless
-  server: 196.196.149.80
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  encryption: none
-  flow: xtls-rprx-vision
-- name: 英国+V2CROSS.COM
-  type: vless
-  server: 80.47.10.106
-  port: 443
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  encryption: none
-- name: 台湾省台北市+中华电信
-  type: vless
-  server: free.fugui.lol
-  port: 47396
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-  encryption: none
-  flow: xtls-rprx-vision
-- name: 香港+葵兴数据中心
-  type: trojan
-  server: sclass-01.catcat321.com
-  port: 20103
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  sni: hk.catxstar.com
-- name: 台湾省台北市+中华电信-1
-  type: vless
-  server: free.fugui.lol
-  port: 62015
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
-  encryption: none
-  flow: xtls-rprx-vision
-- name: 立陶宛+V2CROSS.COM
-  type: vless
-  server: 88.216.60.73
-  port: 443
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  encryption: none
-- name: 🇺🇸US-95.215.201.18-0063
-  type: ss
-  server: 95.215.201.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-193.151.163.18-0060
-  type: ss
-  server: 193.151.163.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-45.86.51.18-0110
-  type: ss
-  server: 45.86.51.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-185.230.230.18-0059
-  type: ss
-  server: 185.230.230.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-167.88.61.52-0253
-  type: trojan
-  server: 167.88.61.52
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
-- name: 🇺🇸US-193.151.160.9-0061
-  type: ss
-  server: 193.151.160.9
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-169.197.142.68-0104
-  type: ss
-  server: 169.197.142.68
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-193.151.160.18-0062
-  type: ss
-  server: 193.151.160.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-173.244.56.6-0254
-  type: ss
-  server: 173.244.56.6
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸US-216.106.186.33-0133
-  type: trojan
-  server: resources.findlocaljobnetworkandbuildcommunityconnections.com
-  port: 443
-  password: f0eb8c92ce8946aaba856569cff1a16b
-  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
-- name: 🇳🇱NL-193.29.139.168-5081
-  type: ss
-  server: 193.29.139.168
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: QCXDxuDlTTMD7jtgHUjIoj
-- name: 🇬🇧GB-82.38.31.194-5226
-  type: ss
-  server: 82.38.31.194
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇺🇸US-84.20.27.183-0087
-  type: ss
-  server: 84.20.27.183
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧GB-82.38.31.189-0084
-  type: ss
-  server: 82.38.31.189
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.180-0089
-  type: ss
-  server: 82.38.31.180
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇺🇸US-38.22.17.129-0140
-  type: ss
-  server: 38.22.17.129
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧GB-82.38.31.217-0251
-  type: ss
-  server: 82.38.31.217
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇦🇺AU-45.63.30.142-0102
-  type: trojan
-  server: 45.63.30.142
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: connectwithemployerstohireyouridealteam.com
-- name: 🇺🇸US-172.111.36.123-0113
-  type: ss
-  server: 172.111.36.123
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-38.121.43.225-0103
-  type: ss
-  server: 38.121.43.225
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧GB-82.38.31.206-0172
-  type: ss
-  server: 82.38.31.206
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.181-0080
-  type: ss
-  server: 82.38.31.181
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇺🇸US-137.184.89.151-0173
-  type: ss
-  server: 137.184.89.151
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-167.88.63.99-0100
-  type: ss
-  server: 167.88.63.99
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧GB-82.38.31.212-0068
-  type: ss
-  server: 82.38.31.212
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.210-0067
-  type: ss
-  server: 82.38.31.210
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.214-0073
-  type: ss
-  server: 82.38.31.214
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱NL-193.29.139.147-0075
-  type: ss
-  server: 193.29.139.147
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.208-5227
-  type: ss
-  server: 82.38.31.208
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇺🇸US-38.121.43.18-0117
-  type: ss
-  server: 38.121.43.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-38.22.17.219-0105
-  type: ss
-  server: 38.22.17.219
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇩🇪DE-193.108.119.15-0481
-  type: trojan
-  server: 193.108.119.15
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.iloverussia2026.com
-- name: 🇺🇸US-167.88.62.203-0108
-  type: ss
-  server: 167.88.62.203
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧GB-82.38.31.190-0072
-  type: ss
-  server: 82.38.31.190
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇺🇸US-38.121.43.231-0162
-  type: ss
-  server: 38.121.43.231
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧GB-82.38.31.216-0074
-  type: ss
-  server: 82.38.31.216
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇨🇱CL-64.176.7.205-0082
-  type: trojan
-  server: 64.176.7.205
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: advanceyouremploymentskillsandcareerdevelopmenthub.com
-- name: 🇺🇸US-216.106.178.169-0095
-  type: ss
-  server: 216.106.178.169
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧GB-82.38.31.207-0083
-  type: ss
-  server: 82.38.31.207
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.205-0081
-  type: ss
-  server: 82.38.31.205
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇺🇸US-38.128.66.32-0092
-  type: ss
-  server: 38.128.66.32
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇧🇷BR-216.238.104.154-0099
-  type: trojan
-  server: 216.238.104.154
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: findtemporaryworkandfreelancerprojectsonlineplatform.com
-- name: 🇺🇸US-149.40.57.138-0094
-  type: ss
-  server: 149.40.57.138
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇬🇧GB-82.38.31.179-0085
-  type: ss
-  server: 82.38.31.179
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇺🇸US-37.19.198.243-5282
-  type: ss
-  server: 37.19.198.243
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸US-66.163.112.121-0088
-  type: trojan
-  server: 66.163.112.121
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.unlockyourfuturefindyourperfectcareer.com
-- name: 🇸🇬SG-149.88.106.73-0165
-  type: ss
-  server: 149.88.106.73
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-162.251.62.31-0101
-  type: ss
-  server: 162.251.62.31
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇰🇷KR-158.247.253.243-0116
-  type: trojan
-  server: 158.247.253.243
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
-- name: 🇺🇸US-149.40.57.133-0122
-  type: ss
-  server: 149.40.57.133
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇺🇸US-172.111.38.72-0136
-  type: ss
-  server: 172.111.38.72
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇳🇱NL-109.201.152.181-0144
-  type: ss
-  server: 109.201.152.181
-  port: 443
-  cipher: aes-128-cfb
-  password: shadowsocks
-- name: 🇯🇵JP-149.22.87.241-0148
-  type: ss
-  server: 149.22.87.241
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸US-38.91.100.39-0131
-  type: ss
-  server: 38.91.100.39
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: 🇨🇦CA-137.184.174.93-0130
-  type: ss
-  server: 137.184.174.93
-  port: 8080
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇸🇬SG-68.183.227.4-0158
-  type: ss
-  server: 68.183.227.4
-  port: 8080
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇳🇱NL-158.173.20.171-5204
-  type: ss
-  server: 158.173.20.171
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇬🇧GB-146.70.61.37-0120
-  type: ss
-  server: 146.70.61.37
-  port: 8080
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-- name: 🇬🇧GB-82.38.31.62-0154
-  type: ss
-  server: 82.38.31.62
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇬🇧GB-82.38.31.48-0155
-  type: ss
-  server: 82.38.31.48
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇬🇧GB-82.38.31.162-0157
-  type: ss
-  server: 82.38.31.162
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇬🇧GB-178.83.185.156-0142
-  type: ss
-  server: 178.83.185.156
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇬🇧GB-82.38.31.49-0147
-  type: ss
-  server: 82.38.31.49
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇬🇧GB-82.38.31.47-0149
-  type: ss
-  server: 82.38.31.47
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇯🇵JP-149.22.87.240-0448
+- name: 🇯🇵[openproxylist.com] ss-JP-1
   type: ss
   server: 149.22.87.240
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇬🇧GB-82.38.31.35-0159
+- name: 🏳[openproxylist.com] ss--23
   type: ss
-  server: 82.38.31.35
+  server: 149.22.87.241
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🏳[openproxylist.com] ss--24
+  type: ss
+  server: 141.98.101.181
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇬🇧[openproxylist.com] ss-GB-6
+  type: ss
+  server: 141.98.101.178
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸[openproxylist.com] ss-US-6
+  type: ss
+  server: 156.146.38.167
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🏳[openproxylist.com] ss--25
+  type: ss
+  server: 47.85.162.44
+  port: 443
+  cipher: 2022-blake3-chacha20-poly1305
+  password: 3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA=
+- name: 新西兰+V2CROSS.COM
+  type: ss
+  server: 202.50.253.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 新西兰+V2CROSS.COM-1
+  type: ss
+  server: 202.50.253.99
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 新西兰+V2CROSS.COM-2
+  type: ss
+  server: 202.50.253.90
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 新西兰+V2CROSS.COM-3
+  type: ss
+  server: 202.50.253.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 新西兰+V2CROSS.COM-4
+  type: ss
+  server: 202.50.253.27
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 新西兰+V2CROSS.COM-5
+  type: ss
+  server: 202.50.253.81
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-193.151.163.18-0054
+  type: ss
+  server: 193.151.163.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-37.19.198.236-5704
+  type: ss
+  server: 37.19.198.236
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸US-193.151.160.9-0058
+  type: ss
+  server: 193.151.160.9
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-37.19.198.160-5702
+  type: ss
+  server: 37.19.198.160
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸US-193.151.160.18-0060
+  type: ss
+  server: 193.151.160.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇬🇧GB-82.38.31.208-0091
+  type: ss
+  server: 82.38.31.208
   port: 8080
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇬🇧GB-82.38.31.61-0150
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.194-0065
   type: ss
-  server: 82.38.31.61
+  server: 82.38.31.194
   port: 8080
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇬🇧GB-82.38.31.46-0161
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.216-0099
   type: ss
-  server: 82.38.31.46
+  server: 82.38.31.216
   port: 8080
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇬🇧GB-82.38.31.66-0151
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.190-0097
   type: ss
-  server: 82.38.31.66
+  server: 82.38.31.190
   port: 8080
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: 🇰🇷KR-218.237.185.234-0180
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.212-0084
   type: ss
-  server: p141.panda001.net
-  port: 4652
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇰🇷KR-211.178.105.134-0185
+  server: 82.38.31.212
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇺🇸US-185.230.230.18-0056
   type: ss
-  server: 211.178.105.134
-  port: 6123
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-- name: 🇬🇧GB-82.38.31.187-0076
+  server: 185.230.230.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇬🇧GB-82.38.31.202-0245
+  type: ss
+  server: 82.38.31.202
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.210-0087
+  type: ss
+  server: 82.38.31.210
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱NL-193.29.139.168-0063
+  type: ss
+  server: 193.29.139.168
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: QCXDxuDlTTMD7jtgHUjIoj
+- name: 🇬🇧GB-82.38.31.193-0244
+  type: ss
+  server: 82.38.31.193
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.214-0089
+  type: ss
+  server: 82.38.31.214
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱NL-193.29.139.147-0090
+  type: ss
+  server: 193.29.139.147
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.187-0169
   type: ss
   server: 82.38.31.187
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.199-0192
+- name: 🇬🇧GB-82.38.31.192-0238
+  type: ss
+  server: 82.38.31.192
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇮🇹IT-202.50.253.54-0161
+  type: ss
+  server: 202.50.253.54
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇬🇧GB-82.38.31.217-0074
+  type: ss
+  server: 82.38.31.217
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.206-0078
+  type: ss
+  server: 82.38.31.206
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.205-0104
+  type: ss
+  server: 82.38.31.205
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.207-0103
+  type: ss
+  server: 82.38.31.207
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.186-0241
+  type: ss
+  server: 82.38.31.186
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.184-0239
+  type: ss
+  server: 82.38.31.184
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.180-0071
+  type: ss
+  server: 82.38.31.180
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇳🇱NL-193.29.139.223-0243
+  type: ss
+  server: 193.29.139.223
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇺🇸US-84.20.27.183-0067
+  type: ss
+  server: 84.20.27.183
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇬🇧GB-82.38.31.189-0069
+  type: ss
+  server: 82.38.31.189
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇬🇧GB-82.38.31.179-0117
+  type: ss
+  server: 82.38.31.179
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇺🇸US-37.19.198.243-0118
+  type: ss
+  server: 37.19.198.243
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇨🇱CL-64.176.7.205-0100
+  type: trojan
+  server: 64.176.7.205
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: advanceyouremploymentskillsandcareerdevelopmenthub.com
+- name: 🇮🇹IT-202.50.253.45-0178
+  type: ss
+  server: 202.50.253.45
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇧🇷BR-216.238.104.154-0108
+  type: trojan
+  server: 216.238.104.154
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: findtemporaryworkandfreelancerprojectsonlineplatform.com
+- name: 🇺🇸US-149.40.57.138-0116
+  type: ss
+  server: 149.40.57.138
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇬🇧GB-82.38.31.191-0240
+  type: ss
+  server: 82.38.31.191
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇮🇹IT-202.50.253.18-0138
+  type: ss
+  server: 202.50.253.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-38.121.43.231-0098
+  type: ss
+  server: 38.121.43.231
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-167.88.62.203-0095
+  type: ss
+  server: 167.88.62.203
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-38.121.43.18-0092
+  type: ss
+  server: 38.121.43.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹IT-202.50.253.36-0203
+  type: ss
+  server: 202.50.253.36
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-172.111.38.72-0128
+  type: ss
+  server: 172.111.38.72
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-172.111.36.123-0076
+  type: ss
+  server: 172.111.36.123
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-38.22.17.219-0093
+  type: ss
+  server: 38.22.17.219
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-66.163.112.121-0119
+  type: trojan
+  server: 66.163.112.121
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: www.unlockyourfuturefindyourperfectcareer.com
+- name: 🇺🇸US-38.128.66.32-0106
+  type: ss
+  server: 38.128.66.32
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇩🇪DE-193.108.119.96-0482
+  type: trojan
+  server: 193.108.119.96
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.iloverussia2026.com
+- name: 🇬🇧GB-146.70.61.37-0144
+  type: ss
+  server: 146.70.61.37
+  port: 8080
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇦🇺AU-45.63.30.142-0075
+  type: trojan
+  server: 45.63.30.142
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: connectwithemployerstohireyouridealteam.com
+- name: 🇺🇸US-216.106.186.33-0062
+  type: trojan
+  server: resources.findlocaljobnetworkandbuildcommunityconnections.com
+  port: 443
+  password: f0eb8c92ce8946aaba856569cff1a16b
+  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
+- name: 🇺🇸US-45.86.51.18-0055
+  type: ss
+  server: 45.86.51.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-38.91.100.39-0137
+  type: ss
+  server: 38.91.100.39
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-167.88.61.52-0057
+  type: trojan
+  server: 167.88.61.52
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.browseseniorrolesandenhanceyourcareertoday.com
+- name: 🇺🇸US-173.244.56.9-5711
+  type: ss
+  server: 173.244.56.9
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸US-149.40.57.133-0125
+  type: ss
+  server: 149.40.57.133
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-95.215.201.18-0053
+  type: ss
+  server: 95.215.201.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹IT-202.50.253.63-0143
+  type: ss
+  server: 202.50.253.63
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇨🇦CA-149.22.95.183-5757
+  type: ss
+  server: 149.22.95.183
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇸🇬SG-149.88.106.73-0122
+  type: ss
+  server: 149.88.106.73
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇺🇸US-173.244.56.6-0061
+  type: ss
+  server: 173.244.56.6
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸US-216.106.178.169-0101
+  type: ss
+  server: 216.106.178.169
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇨🇦CA-137.184.174.93-0140
+  type: ss
+  server: 137.184.174.93
+  port: 8080
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇰🇷KR-158.247.253.243-0124
+  type: trojan
+  server: 158.247.253.243
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: connectgraduateswithjobopeningsandgrowprofessionally.com
+- name: 🇳🇱NL-158.173.20.171-0142
+  type: ss
+  server: 158.173.20.171
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸US-38.121.43.225-0077
+  type: ss
+  server: 38.121.43.225
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇬🇧GB-82.38.31.62-0147
+  type: ss
+  server: 82.38.31.62
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇺🇸US-169.197.142.68-0059
+  type: ss
+  server: 169.197.142.68
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇬🇧GB-178.83.185.156-0150
+  type: ss
+  server: 178.83.185.156
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇬🇧GB-82.38.31.48-0148
+  type: ss
+  server: 82.38.31.48
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇬🇧GB-82.38.31.47-0153
+  type: ss
+  server: 82.38.31.47
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇬🇧GB-82.38.31.49-0152
+  type: ss
+  server: 82.38.31.49
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇬🇧GB-82.38.31.35-0155
+  type: ss
+  server: 82.38.31.35
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇬🇧GB-82.38.31.162-0149
+  type: ss
+  server: 82.38.31.162
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇳🇱NL-109.201.152.181-0133
+  type: ss
+  server: 109.201.152.181
+  port: 443
+  cipher: aes-128-cfb
+  password: shadowsocks
+- name: 🇬🇧GB-82.38.31.66-0160
+  type: ss
+  server: 82.38.31.66
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇬🇧GB-82.38.31.61-0156
+  type: ss
+  server: 82.38.31.61
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+- name: 🇨🇦CA-15.235.57.6-0200
+  type: ss
+  server: 15.235.57.6
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: kxhnt5jtykd328cg
+- name: 🇭🇰HK-213.176.92.148-0164
+  type: ss
+  server: 213.176.92.148
+  port: 40647
+  cipher: aes-256-gcm
+  password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=
+- name: 🇬🇧GB-82.38.31.199-0173
   type: ss
   server: 82.38.31.199
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.203-0111
+- name: 🏁RELAY-172.64.229.21-1066
+  type: vmess
+  server: 172.64.229.21
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  tls: true
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+- name: 🇺🇸US-15.204.247.206-0180
   type: ss
-  server: 82.38.31.203
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇪🇸ES-5.188.181.201-0241
+  server: 15.204.247.206
+  port: 4444
+  cipher: aes-256-gcm
+  password: pKEW8JPByTVTLtM
+- name: 🇯🇵JP-168.138.205.100-0193
+  type: ss
+  server: 168.138.205.100
+  port: 53758
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+- name: 🇪🇸ES-5.188.181.201-5751
   type: ss
   server: 5.188.181.201
-  port: 9001
+  port: 9003
   cipher: aes-256-cfb
-  password: UkXRsXvR6buDMG2Y
-- name: 🇬🇧GB-82.38.31.218-0188
-  type: ss
-  server: 82.38.31.218
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇫🇷FR-145.239.55.210-0190
+  password: JdmRK9gMEqFgs8nP
+- name: 🇫🇷FR-145.239.55.210-0179
   type: vmess
   server: 145.239.55.210
   port: 80
@@ -1480,181 +1408,163 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.
-- name: 🇺🇸US-15.204.247.206-0175
-  type: ss
-  server: 15.204.247.206
-  port: 4444
-  cipher: aes-256-gcm
-  password: pKEW8JPByTVTLtM
-- name: 🇪🇸ES-5.188.181.201-0207
-  type: ss
-  server: 5.188.181.201
-  port: 9042
-  cipher: aes-256-cfb
-  password: S7KwUu7yBy58S3Ga
-- name: 🇪🇸ES-5.188.181.201-5211
-  type: ss
-  server: 5.188.181.201
-  port: 9019
-  cipher: aes-256-cfb
-  password: GA9KzeEgvfxNrgmM
-- name: 🇪🇸ES-5.188.181.201-5214
-  type: ss
-  server: 5.188.181.201
-  port: 9011
-  cipher: aes-256-cfb
-  password: M3t2ZEQcMGRWBjRa
-- name: 🇪🇸ES-5.188.181.201-5208
-  type: ss
-  server: 5.188.181.201
-  port: 9014
-  cipher: aes-256-cfb
-  password: KnJGad3FqTvjqbaX
-- name: 🇪🇸ES-5.188.181.201-0215
-  type: ss
-  server: 5.188.181.201
-  port: 9027
-  cipher: aes-256-cfb
-  password: EXN3S3eQpjE7EJu8
-- name: 🇪🇸ES-5.188.181.201-0218
-  type: ss
-  server: 5.188.181.201
-  port: 9030
-  cipher: aes-256-cfb
-  password: GeregetR8cvQHzYr
-- name: 🇯🇵JP-168.138.205.100-0204
-  type: ss
-  server: 168.138.205.100
-  port: 53758
-  cipher: aes-128-gcm
-  password: Bwlqh7GcFB
-- name: 🇨🇭CH-208.69.78.33-0202
-  type: trojan
-  server: 208.69.78.33
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: courses.yourultimateprofessionalcareerhub.com
-- name: 🇪🇸ES-5.188.181.201-0210
-  type: ss
-  server: 5.188.181.201
-  port: 9037
-  cipher: aes-256-cfb
-  password: TN2YqghxeFDKZfLU
-- name: 🇪🇸ES-5.188.181.201-0208
-  type: ss
-  server: 5.188.181.201
-  port: 9054
-  cipher: aes-256-cfb
-  password: VcFuyXvND2yQWSFY
-- name: 🇨🇦CA-51.79.64.198-0404
-  type: ss
-  server: 51.79.64.198
-  port: 8119
-  cipher: aes-256-gcm
-  password: cdBIDV42DCwnfIN
-- name: 🇬🇧GB-82.38.31.219-0160
+- name: 🇬🇧GB-82.38.31.219-0199
   type: ss
   server: 82.38.31.219
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇨🇦CA-15.235.57.6-0247
-  type: ss
-  server: 15.235.57.6
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: kxhnt5jtykd328cg
-- name: 🇪🇸ES-5.188.181.201-0209
+- name: 🇪🇸ES-5.188.181.201-5749
   type: ss
   server: 5.188.181.201
-  port: 9031
+  port: 9005
   cipher: aes-256-cfb
-  password: BwcAUZk8hUFAkDGN
-- name: 🇺🇸US-198.98.53.130-0222
+  password: ZET59LF6DvCC8KVt
+- name: 🇯🇵JP-168.138.43.75-1052
+  type: vmess
+  server: 168.138.43.75
+  port: 80
+  uuid: 11c3627f-31e8-4695-dfbd-34076e2f1f5d
+  alterId: 0
+  cipher: auto
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: jp01.a0a.xyz
+- name: 🇨🇦CA-51.222.200.165-0183
   type: ss
-  server: 198.98.53.130
-  port: 443
+  server: 51.222.200.165
+  port: 5000
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: 🇪🇸ES-5.188.181.201-0187
+  type: ss
+  server: 5.188.181.201
+  port: 9019
+  cipher: aes-256-cfb
+  password: GA9KzeEgvfxNrgmM
+- name: 🇨🇦CA-51.79.85.185-0181
+  type: ss
+  server: 51.79.85.185
+  port: 8118
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+- name: 🇪🇸ES-5.188.181.201-0192
+  type: ss
+  server: 5.188.181.201
+  port: 9030
+  cipher: aes-256-cfb
+  password: GeregetR8cvQHzYr
+- name: 🇪🇸ES-5.188.181.201-0190
+  type: ss
+  server: 5.188.181.201
+  port: 9027
+  cipher: aes-256-cfb
+  password: EXN3S3eQpjE7EJu8
+- name: 🇬🇧GB-82.38.31.176-0246
+  type: ss
+  server: 82.38.31.176
+  port: 8080
   cipher: chacha20-ietf-poly1305
-  password: eDfN7SODQceIOmIAbtJJtK
-- name: 🇺🇸US-156.146.38.169-0223
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇪🇸ES-5.188.181.201-0188
   type: ss
-  server: 156.146.38.169
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸US-156.146.38.168-0213
-  type: ss
-  server: 156.146.38.168
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸US-156.146.38.167-0206
-  type: ss
-  server: 156.146.38.167
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇬🇧GB-141.98.101.182-5083
-  type: ss
-  server: 141.98.101.182
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸US-156.146.38.170-0181
-  type: ss
-  server: 156.146.38.170
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇺🇸US-157.254.38.210-0226
+  server: 5.188.181.201
+  port: 9011
+  cipher: aes-256-cfb
+  password: M3t2ZEQcMGRWBjRa
+- name: 🇨🇭CH-208.69.78.33-0195
   type: trojan
-  server: sclass-b1.catcat321.com
-  port: 20051
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  sni: hk.catxstar.com
-- name: 🇺🇸US-157.254.38.210-0231
-  type: trojan
-  server: sclass-01.catcat321.com
-  port: 20103
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  sni: hk.catxstar.com
-- name: 🇬🇧GB-141.98.101.179-0198
+  server: 208.69.78.33
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.yourultimateprofessionalcareerhub.com
+- name: 🇫🇷FR-107.161.160.28-0516
+  type: ss
+  server: 107.161.160.28
+  port: 8388
+  cipher: aes-256-gcm
+  password: itzvpn@321
+- name: 🇰🇷KR-218.237.185.234-0162
+  type: ss
+  server: p141.panda001.net
+  port: 4652
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+- name: 🇬🇧GB-141.98.101.179-0219
   type: ss
   server: 141.98.101.179
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇭🇰HK-95.40.108.216-0235
-  type: trojan
-  server: sclass-c1.catcat321.com
-  port: 20086
-  password: d9064589-74af-432a-9390-5d8a9da281bf
-  sni: hk.catxstar.com
-- name: 🇬🇧GB-141.98.101.178-0432
+- name: 🇬🇧GB-141.98.101.182-0214
   type: ss
-  server: 141.98.101.178
+  server: 141.98.101.182
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-- name: 🇺🇸US-157.254.38.210-0234
+- name: 🇨🇦CA-51.79.64.198-0198
+  type: ss
+  server: 51.79.64.198
+  port: 8119
+  cipher: aes-256-gcm
+  password: cdBIDV42DCwnfIN
+- name: 🇬🇧GB-82.38.31.218-0177
+  type: ss
+  server: 82.38.31.218
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: 🇯🇵JP-168.138.205.100-0194
+  type: ss
+  server: jpa.123069.xyz
+  port: 53758
+  cipher: aes-128-gcm
+  password: Bwlqh7GcFB
+- name: 🇺🇸US-156.146.38.170-0215
+  type: ss
+  server: 156.146.38.170
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸US-156.146.38.168-0212
+  type: ss
+  server: 156.146.38.168
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸US-198.98.53.130-0209
+  type: ss
+  server: 198.98.53.130
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: eDfN7SODQceIOmIAbtJJtK
+- name: 🇩🇪DE-109.176.202.74-0541
   type: trojan
-  server: sclass-c2.catcat321.com
+  server: alireza.karamoz1.ir
+  port: 443
+  password: poimnap
+  sni: alireza.karamoz1.ir
+- name: 🇺🇸US-156.146.38.169-0211
+  type: ss
+  server: 156.146.38.169
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: 🇺🇸US-157.254.38.210-0216
+  type: trojan
+  server: sclass-b1.catcat321.com
   port: 20051
-  password: d9064589-74af-432a-9390-5d8a9da281bf
+  password: d7563108-615c-4338-a7bd-77f359869a4a
   sni: hk.catxstar.com
-- name: 🇸🇬SG-15.235.184.127-0225
-  type: trojan
-  server: 15.235.184.127
-  port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: exploredigitaljobplatformandfindonlinework.com
-- name: 🇬🇧GB-141.98.101.181-0249
+- name: 🇰🇷KR-211.178.105.134-0165
   type: ss
-  server: 141.98.101.181
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-- name: 🇭🇰HK-156.245.232.239-0236
+  server: 211.178.105.134
+  port: 6123
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+- name: 🇭🇰HK-156.245.232.239-0227
   type: vmess
   server: 156.245.232.239
   port: 35043
@@ -1664,80 +1574,66 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇬🇧GB-82.38.31.192-0091
+- name: 🇪🇸ES-5.188.181.201-0196
   type: ss
-  server: 82.38.31.192
+  server: 5.188.181.201
+  port: 9037
+  cipher: aes-256-cfb
+  password: TN2YqghxeFDKZfLU
+- name: 🇪🇸ES-5.188.181.201-0189
+  type: ss
+  server: 5.188.181.201
+  port: 9014
+  cipher: aes-256-cfb
+  password: KnJGad3FqTvjqbaX
+- name: 🇪🇸ES-5.188.181.201-0201
+  type: ss
+  server: 5.188.181.201
+  port: 9031
+  cipher: aes-256-cfb
+  password: BwcAUZk8hUFAkDGN
+- name: 🇪🇸ES-5.188.181.201-0185
+  type: ss
+  server: 5.188.181.201
+  port: 9029
+  cipher: aes-256-cfb
+  password: dU3DSNS8wYPXzEKw
+- name: 🇪🇸ES-5.188.181.201-0184
+  type: ss
+  server: 5.188.181.201
+  port: 9042
+  cipher: aes-256-cfb
+  password: S7KwUu7yBy58S3Ga
+- name: 🇫🇷FR-51.83.61.102-0205
+  type: ss
+  server: 51.83.61.102
   port: 8080
   cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.184-0086
+  password: 29irqk0paakcx19v
+- name: 🇪🇸ES-5.188.181.201-0176
   type: ss
-  server: 82.38.31.184
+  server: 5.188.181.201
+  port: 9001
+  cipher: aes-256-cfb
+  password: UkXRsXvR6buDMG2Y
+- name: 🇫🇷FR-51.77.144.182-0207
+  type: ss
+  server: 51.77.144.182
   port: 8080
   cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.191-0079
+  password: x19py0a8ipglqkbe
+- name: 🇸🇬SG-68.183.227.4-0141
   type: ss
-  server: 82.38.31.191
+  server: 68.183.227.4
   port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.186-0077
-  type: ss
-  server: 82.38.31.186
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇳🇱NL-193.29.139.223-0071
-  type: ss
-  server: 193.29.139.223
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.193-0069
-  type: ss
-  server: 82.38.31.193
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.202-0065
-  type: ss
-  server: 82.38.31.202
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇬🇧GB-82.38.31.176-0205
-  type: ss
-  server: 82.38.31.176
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: 🇨🇳CN-113.31.124.147-0058
-  type: vmess
-  server: 113.31.124.147
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
+- name: 🇩🇪DE-193.108.119.15-0094
+  type: trojan
+  server: 193.108.119.15
   port: 443
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-opts:
-    path: /ray
-    headers:
-      Host: lg30.cfcdn3.xyz
-- name: 🇭🇰HK-159.100.206.88-0052
-  type: vmess
-  server: 159.100.206.88
-  port: 443
-  uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
-  alterId: 0
-  cipher: auto
-  tls: true
-  network: ws
-  ws-opts:
-    path: /ray
-    headers:
-      Host: lg30.cfcdn3.xyz
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.iloverussia2026.com
 - name: 🇺🇲16@exclavevpn
   type: hysteria2
   server: 13.184.166.19
@@ -1831,7 +1727,7 @@ proxies:
   port: 443
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: 127.0.0.1
-- name: 🇩🇪 德国 | DEU
+- name: 🔹66@oneclickvpnkeys
   type: hysteria2
   server: 77.90.15.183
   port: 8964
@@ -1957,7 +1853,7 @@ proxies:
   port: 443
   password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
   sni: hy2.aspidnet.xyz
-- name: 🇺🇸 美国 | USA 6
+- name: '@iranping24'
   type: hysteria2
   server: sub.macdonalder.cyou
   port: 16146
@@ -1994,7 +1890,7 @@ proxies:
   encryption: none
   tls: true
   servername: 15b171g.nl7.h1clayd.click
-- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
   type: vless
   server: 94.183.234.245
   port: 443
@@ -2003,29 +1899,29 @@ proxies:
   tls: true
   servername: www.bing.com
   flow: xtls-rprx-vision
-- name: 🇦🇺[www.v2nodes.com] vless-AU-1...
+- name: '🏳[www.v2nodes.com] vless- #1'
   type: vless
-  server: 39.109.111.23
-  port: 48158
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  server: 178.172.227.228
+  port: 14430
+  uuid: b6e5dc56-836f-48c1-9163-b0b0b43b647d
   encryption: none
-  tls: true
-  servername: www.apple.com
-  flow: xtls-rprx-vision
-- name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: d4733e5a-5850-4523-942e-f28f82ebf4a9
-  encryption: none
-  tls: true
-  servername: party-5cn.pages.dev
   network: ws
   ws-opts:
-    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560fp=chrome
+    path: /vless
     headers:
-      Host: party-5cn.pages.dev
-- name: '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+      Host: 178.172.227.228
+- name: 🇨🇦[www.v2nodes.com] vless-CA-1...
+  type: vless
+  server: 104.18.109.147
+  port: 2052
+  uuid: c29d39bd-92a4-45db-bb61-56013998617c
+  encryption: none
+  network: ws
+  ws-opts:
+    path: /Telegram-XV2ry2?ed=2048
+    headers:
+      Host: www.speedtest.net.www.1google.com.bing.com.visa.com.tls.xv98.ip-ddns.com
+- name: '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
   type: vless
   server: cf.008500.xyz
   port: 443
@@ -2036,7 +1932,18 @@ proxies:
     path: /?ed=2560fp=chromesecurity=tls
     headers:
       Host: powered-by-surena.configfarsi695fd01a94fe7.workers.dev
-- name: '🇨🇦[www.v2nodes.com] vless-CA-1... #4'
+- name: 🇸🇬[www.v2nodes.com] vless-SG-8...
+  type: vless
+  server: 104.26.13.31
+  port: 8080
+  uuid: 3e06b1db-2efb-446e-ba2d-68850dfd2f9d
+  encryption: none
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: bdfba-cool-tree-b580.v8fz4kbv.workers.dev
+- name: '🇨🇦[www.v2nodes.com] vless-CA-1... #3'
   type: vless
   server: 209.200.246.148
   port: 443
@@ -2045,7 +1952,7 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   flow: xtls-rprx-vision
-- name: '🇨🇦[www.v2nodes.com] vless-CA-1... #5'
+- name: '🇨🇦[www.v2nodes.com] vless-CA-1... #4'
   type: vless
   server: 66.70.179.198
   port: 2053
@@ -2064,32 +1971,28 @@ proxies:
     path: /
     headers:
       Host: sdf23g-billowing-moon-348e.mzm468gc.workers.dev
-- name: 🇨🇭[www.v2nodes.com] vless-CH-1...
+- name: 🇨🇦[www.v2nodes.com] vless-CA
   type: vless
-  server: 74.161.152.237
-  port: 2083
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  encryption: none
-  tls: true
-  servername: www.apple.com
-  flow: xtls-rprx-vision
-- name: '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  type: vless
-  server: 45.90.59.15
+  server: 27.50.48.6
   port: 443
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
   encryption: none
-  tls: true
-  servername: www.cloudflare.com
-  flow: xtls-rprx-vision
-- name: '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
+    headers:
+      Host: vless2-8vx.pages.dev
+- name: 🇸🇬[www.v2nodes.com] vless-SG-7...
   type: vless
-  server: 208.69.78.217
-  port: 2053
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  server: 188.114.98.0
+  port: 443
+  uuid: ec24cde1-6bd9-4b69-baf7-270e8aabd6dd
   encryption: none
-  tls: true
-  servername: www.apple.com
+  network: ws
+  ws-opts:
+    path: /?ed=2560fp=unsafesecurity=tls
+    headers:
+      Host: rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV
 - name: 🇨🇿[www.v2nodes.com] vless-CZ-1...
   type: vless
   server: 195.123.245.241
@@ -2148,7 +2051,7 @@ proxies:
   tls: true
   servername: 4935e4t.de25.h1clayd.click
   flow: xtls-rprx-vision
-- name: '🏳[www.v2nodes.com] vless- #1'
+- name: '🏳[www.v2nodes.com] vless- #3'
   type: vless
   server: music.3apes.online
   port: 443
@@ -2157,7 +2060,7 @@ proxies:
   tls: true
   servername: music.3apes.online
   flow: xtls-rprx-vision
-- name: '🏳[www.v2nodes.com] vless- #3'
+- name: '🏳[www.v2nodes.com] vless- #4'
   type: vless
   server: 45.129.242.56
   port: 443
@@ -2166,38 +2069,26 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   flow: xtls-rprx-vision
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+- name: 🇩🇰[www.v2nodes.com] vless-DK-1...
   type: vless
-  server: 144.31.140.125
-  port: 8443
-  uuid: f5e70ce3-cfb4-4df1-b25c-d19bfae627c0
-  encryption: none
-  tls: true
-  servername: twitch.tv
-  flow: xtls-rprx-vision
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  type: vless
-  server: 37.18.14.177
+  server: 193.180.208.167
   port: 443
-  uuid: 7955bf18-35c4-412d-aabd-c0b36c793063
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
   encryption: none
   tls: true
-  servername: owj5svd907.deshevayashaurma.icu
+  servername: v2n5.11676767.xyz
   network: ws
   ws-opts:
-    path: /static/collect/037b5c44e12a/fp=firefox
+    path: /doujin/channels/cbfp=chrome
     headers:
-      Host: owj5svd907.deshevayashaurma.icu
-- name: 🇪🇸[www.v2nodes.com] vless-ES-1...
+      Host: v2n5.11676767.xyz
+- name: 🇪🇪[www.v2nodes.com] vless-EE-1...
   type: vless
-  server: 68.221.177.135
-  port: 2083
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  server: 45.86.60.174
+  port: 16443
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
   encryption: none
-  tls: true
-  servername: www.apple.com
-  flow: xtls-rprx-vision
-- name: '🏳[www.v2nodes.com] vless- #4'
+- name: '🏳[www.v2nodes.com] vless- #5'
   type: vless
   server: 196.196.149.80
   port: 443
@@ -2215,37 +2106,9 @@ proxies:
   tls: true
   servername: www.apple.com
   flow: xtls-rprx-vision
-- name: '🏳[www.v2nodes.com] vless- #5'
-  type: vless
-  server: 46.28.71.247
-  port: 443
-  uuid: 12c53e32-e589-47d6-b857-e4132294f767
-  encryption: none
-  tls: true
-  servername: www.cloudflare.com
-  flow: xtls-rprx-vision
-- name: '🏳[www.v2nodes.com] vless- #6'
-  type: vless
-  server: 212.227.235.66
-  port: 2053
-  uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3
-  encryption: none
-  tls: true
-  servername: www.apple.com
-- name: 🇨🇦[www.v2nodes.com] vless-CA
-  type: vless
-  server: 27.50.48.6
-  port: 443
-  uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
-  encryption: none
-  network: ws
-  ws-opts:
-    path: /fp=chromesecurity=tls
-    headers:
-      Host: vless2-8vx.pages.dev
 - name: 🇫🇮[www.v2nodes.com] vless-FI-1...
   type: vless
-  server: 198.202.24.142
+  server: 104.17.145.145
   port: 2083
   uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
   encryption: none
@@ -2274,14 +2137,6 @@ proxies:
   tls: true
   servername: mirror-75.topp-con.xyz
   flow: xtls-rprx-vision
-- name: '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
-  type: vless
-  server: 95.216.27.15
-  port: 2053
-  uuid: b79d736d-0f10-4169-b626-362059d18204
-  encryption: none
-  tls: true
-  servername: www.cloudflare.com
 - name: 🇫🇷[www.v2nodes.com] vless-FR-1...
   type: vless
   server: 20.19.83.143
@@ -2291,27 +2146,7 @@ proxies:
   tls: true
   servername: www.apple.com
   flow: xtls-rprx-vision
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
-  type: vless
-  server: 199.232.78.120
-  port: 443
-  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
-  encryption: none
-  network: ws
-  ws-opts:
-    path: /security=tls
-    headers:
-      Host: fraboijji.global.ssl.fastly.net.
 - name: '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
-  type: vless
-  server: 145.223.68.58
-  port: 443
-  uuid: edb50d20-2d3e-4c1e-8a75-a17168a89aa5
-  encryption: none
-  tls: true
-  servername: www.cloudflare.com
-  flow: xtls-rprx-vision
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
   type: vless
   server: 152.228.139.33
   port: 35108
@@ -2319,24 +2154,7 @@ proxies:
   encryption: none
   tls: true
   servername: www.nvidia.com
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
-  type: vless
-  server: ww3.levikogjgfdd.ir
-  port: 443
-  uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab
-  encryption: none
-  tls: true
-  servername: passport.yandex.ru
-  flow: xtls-rprx-vision
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
-  type: vless
-  server: 51.77.217.70
-  port: 2053
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-  encryption: none
-  tls: true
-  servername: www.apple.com
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
   type: vless
   server: 62.210.91.10
   port: 23576
@@ -2345,7 +2163,7 @@ proxies:
   tls: true
   servername: fuck.rkn
   flow: xtls-rprx-vision
-- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
   type: vless
   server: 62.210.91.2
   port: 23576
@@ -2356,17 +2174,17 @@ proxies:
   flow: xtls-rprx-vision
 - name: 🇬🇧[www.v2nodes.com] vless-GB-1...
   type: vless
-  server: 88.216.67.54
+  server: xray-ckc68nno-swift-harbor-8.cloady.io
   port: 443
-  uuid: 50414e45-4c5f-5a45-5553-47be357e54da
+  uuid: b004e898-f6cf-54a5-d281-f063d741ad53
   encryption: none
   tls: true
-  servername: 52z4vtewuass.game4090taking.workers.dev
+  servername: xray-ckc68nno-swift-harbor-8.cloady.io
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/47be357e54da/loc-0fp=chrome
+    path: /3e0261245277336dfp=chrome
     headers:
-      Host: 52z4vtewuass.game4090taking.workers.dev
+      Host: xray-ckc68nno-swift-harbor-8.cloady.io
 - name: '🇬🇧[www.v2nodes.com] vless-GB-1... #1'
   type: vless
   server: 136.176.68.34
@@ -2393,6 +2211,14 @@ proxies:
   encryption: none
   tls: true
   servername: www.apple.com
+- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #4'
+  type: vless
+  server: node-uk.connectsuite.org
+  port: 8443
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
+  encryption: none
+  tls: true
+  servername: node-uk.connectsuite.org
 - name: '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   type: vless
   server: 46.250.240.80
@@ -2403,14 +2229,6 @@ proxies:
   servername: www.cloudflare.com
 - name: '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
   type: vless
-  server: 46.250.250.149
-  port: 2053
-  uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-  encryption: none
-  tls: true
-  servername: www.apple.com
-- name: '🇬🇧[www.v2nodes.com] vless-GB-1... #7'
-  type: vless
   server: 57.129.132.223
   port: 80
   uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
@@ -2420,16 +2238,7 @@ proxies:
     path: /vless/
     headers:
       Host: google.com
-- name: 🇬🇷[www.v2nodes.com] vless-GR-1...
-  type: vless
-  server: 85.90.197.220
-  port: 443
-  uuid: 8f704ed6-9a1a-4d04-94dd-1bff501716de
-  encryption: none
-  tls: true
-  servername: www.cloudflare.com
-  flow: xtls-rprx-vision
-- name: '🇭🇰 香港 | HKG #1'
+- name: 🇭🇰[www.v2nodes.com] vless-HK-1...
   type: vless
   server: free.fugui.lol
   port: 47396
@@ -2449,18 +2258,16 @@ proxies:
   flow: xtls-rprx-vision
 - name: 🇮🇳[www.v2nodes.com] vless-IN-1...
   type: vless
-  server: 188.114.99.137
-  port: 443
-  uuid: c1208c5a-2350-0003-affd-fc41b4319286
+  server: 13.140.56.100
+  port: 14430
+  uuid: 68512eac-cd53-4de3-8d1e-08f6e04af1a9
   encryption: none
-  tls: true
-  servername: decdn-28.nome-rkp.net
   network: ws
   ws-opts:
-    path: /media/ws/fp=firefox
+    path: /vless
     headers:
-      Host: decdn-28.nome-rkp.net
-- name: '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+      Host: 13.140.56.100
+- name: '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   type: vless
   server: 194.61.31.126
   port: 2053
@@ -2513,24 +2320,6 @@ proxies:
   tls: true
   servername: www.apple.com
   flow: xtls-rprx-vision
-- name: '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
-  type: vless
-  server: 82.118.16.189
-  port: 443
-  uuid: 29f178f7-f96f-46ba-8fc0-bbcd690ba788
-  encryption: none
-  tls: true
-  servername: www.cloudflare.com
-  flow: xtls-rprx-vision
-- name: '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
-  type: vless
-  server: 82.118.16.187
-  port: 443
-  uuid: dc2259c4-388e-4285-ba18-df619b6672b6
-  encryption: none
-  tls: true
-  servername: www.cloudflare.com
-  flow: xtls-rprx-vision
 - name: 🇯🇵[www.v2nodes.com] vless-JP-1...
   type: vless
   server: 104.16.10.9
@@ -2553,7 +2342,7 @@ proxies:
   tls: true
   servername: www.apple.com
   flow: xtls-rprx-vision
-- name: '🇸🇬[www.v2nodes.com] vless-SG #1'
+- name: '🇸🇬[www.v2nodes.com] vless-SG #3'
   type: vless
   server: sg.fasti.win
   port: 443
@@ -2562,14 +2351,17 @@ proxies:
   tls: true
   servername: sg.fasti.win
   flow: xtls-rprx-vision
-- name: '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
   type: vless
-  server: 151.245.106.49
-  port: 2053
-  uuid: a2de9567-9646-45a9-a410-7303a43bdb6c
+  server: 38.47.96.220
+  port: 11424
+  uuid: 1d16c6e0-1bbe-435b-b661-90043fee999c
   encryption: none
-  tls: true
-  servername: www.cloudflare.com
+  network: ws
+  ws-opts:
+    path: Telegram-WangCai2🇨🇳security=tls
+    headers:
+      Host: notls.lukongtou.eu.org
 - name: 🇰🇿[www.v2nodes.com] vless-KZ-1...
   type: vless
   server: 109.248.170.119
@@ -2578,7 +2370,7 @@ proxies:
   encryption: none
   tls: true
   servername: yahoo.com
-- name: '🏳[www.v2nodes.com] vless- #7'
+- name: '🏳[www.v2nodes.com] vless- #6'
   type: vless
   server: 3h-kazakhstan1.09vpn.com
   port: 8443
@@ -2602,7 +2394,18 @@ proxies:
     path: /wsfp=chrome
     headers:
       Host: 382218.xyz
-- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #1'
+- name: 🇳🇱[www.v2nodes.com] vless-NL-1...
+  type: vless
+  server: 87.242.94.49
+  port: 443
+  uuid: b2744db0-1c64-4218-a93b-9eba0e5f811f
+  encryption: none
+  tls: true
+  servername: radio-prichal.online
+  network: ws
+  ws-opts:
+    path: /checkout/step/TweBulkxumU_fp=firefox
+- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
   type: vless
   server: 31.77.28.68
   port: 443
@@ -2611,7 +2414,7 @@ proxies:
   tls: true
   servername: nl2.soshelper.space
   flow: xtls-rprx-vision
-- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
+- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #4'
   type: vless
   server: 196.196.148.76
   port: 443
@@ -2620,7 +2423,7 @@ proxies:
   tls: true
   servername: 8a2e72t.nl20.h1clayd.shop
   flow: xtls-rprx-vision
-- name: '🏳[www.v2nodes.com] vless- #8'
+- name: '🏳[www.v2nodes.com] vless- #7'
   type: vless
   server: 79.182.39.131
   port: 443
@@ -2628,29 +2431,7 @@ proxies:
   encryption: none
   tls: true
   servername: 717252g.nl8.h1clayd.click
-- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #4'
-  type: vless
-  server: 9.163.235.73
-  port: 2083
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  encryption: none
-  tls: true
-  servername: www.apple.com
-  flow: xtls-rprx-vision
-- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
-  type: vless
-  server: 31.177.111.134
-  port: 443
-  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
-  encryption: none
-  tls: true
-  servername: k6t8wxun3s.schoolbag.top
-  network: ws
-  ws-opts:
-    path: /static/metrics/86d07ea17ea1/fp=firefox
-    headers:
-      Host: ns4pmajwas.flowersgood.top
-- name: '🏳[www.v2nodes.com] vless- #9'
+- name: '🏳[www.v2nodes.com] vless- #8'
   type: vless
   server: 104.222.183.180
   port: 443
@@ -2659,7 +2440,15 @@ proxies:
   tls: true
   servername: www.tradingview.com
   flow: xtls-rprx-vision
-- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #7'
+- name: '🏳[www.v2nodes.com] vless- #9'
+  type: vless
+  server: 194.60.228.97
+  port: 443
+  uuid: 667016ca-f02e-4b5f-bfc3-3d8ed81e9bec
+  encryption: none
+  tls: true
+  servername: base.hosamobenl.co.uk
+- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
   type: vless
   server: 2.59.183.167
   port: 443
@@ -2667,24 +2456,6 @@ proxies:
   encryption: none
   tls: true
   servername: www.samsung.com
-- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #8'
-  type: vless
-  server: 188.116.27.6
-  port: 443
-  uuid: 45c02942-9e3a-4dfd-8042-4f6f83207824
-  encryption: none
-  tls: true
-  servername: www.sony.co.uk
-  flow: xtls-rprx-vision
-- name: '🇳🇱[www.v2nodes.com] vless-NL-1... #9'
-  type: vless
-  server: 87.199.205.28
-  port: 443
-  uuid: 501a2da5-cb22-4a3f-915e-e3b821d1d62d
-  encryption: none
-  tls: true
-  servername: vkvd754.okcdn.ru
-  flow: xtls-rprx-vision
 - name: 🇵🇱[www.v2nodes.com] vless-PL-1...
   type: vless
   server: 93.88.206.70
@@ -2694,7 +2465,7 @@ proxies:
   tls: true
   servername: pulse.sevka.xyz
   flow: xtls-rprx-vision
-- name: '🇵🇱 波兰 | POL #1'
+- name: '🏳[www.v2nodes.com] vless- #10'
   type: vless
   server: 80.47.10.106
   port: 443
@@ -2719,15 +2490,6 @@ proxies:
   encryption: none
   tls: true
   servername: d58daft.plp1.h1cloud.net
-- name: '🏳[www.v2nodes.com] vless- #11'
-  type: vless
-  server: 20.215.66.17
-  port: 2083
-  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
-  encryption: none
-  tls: true
-  servername: www.apple.com
-  flow: xtls-rprx-vision
 - name: '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
   type: vless
   server: 201.58.189.105
@@ -2767,7 +2529,7 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   flow: xtls-rprx-vision
-- name: '🏳[www.v2nodes.com] vless- #12'
+- name: '🏳[www.v2nodes.com] vless- #11'
   type: vless
   server: 46.28.67.55
   port: 443
@@ -2793,7 +2555,7 @@ proxies:
   encryption: none
   tls: true
   servername: www.ebay.com
-- name: 🇸🇪[www.v2nodes.com] vless-SE-1...
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   type: vless
   server: 87.242.94.43
   port: 443
@@ -2806,7 +2568,7 @@ proxies:
     path: /api/v2/session/CAgikYAkk4z7fp=chrome
     headers:
       Host: 87.242.94.43
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
   type: vless
   server: 195.72.62.7
   port: 443
@@ -2815,14 +2577,14 @@ proxies:
   tls: true
   servername: fexzoo.net
   flow: xtls-rprx-vision
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   type: vless
-  server: 141.227.160.61
-  port: 8443
-  uuid: f59fdac3-5842-449b-8c8d-d5ebcdbf1768
+  server: 193.163.203.170
+  port: 443
+  uuid: 11aabba0-5fd1-4f15-8068-74c1a466cefc
   encryption: none
   tls: true
-  servername: apple.com
+  servername: yandex.ru
   flow: xtls-rprx-vision
 - name: 🇸🇬[www.v2nodes.com] vless-SG-1...
   type: vless
@@ -2835,20 +2597,7 @@ proxies:
     path: /announcement?ed=2048fp=randomsecurity=tls
     headers:
       Host: ap-south.862400.xyz
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
-  type: vless
-  server: 27.50.48.6
-  port: 443
-  uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
-  encryption: none
-  tls: true
-  servername: vless2-8vx.pages.dev
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: vless2-8vx.pages.dev
-- name: '🏳[www.v2nodes.com] vless- #13'
+- name: '🏳[www.v2nodes.com] vless- #12'
   type: vless
   server: 5.34.177.164
   port: 443
@@ -2857,7 +2606,7 @@ proxies:
   tls: true
   servername: gateway.icloud.com
   flow: xtls-rprx-vision
-- name: '🏳[www.v2nodes.com] vless- #14'
+- name: '🏳[www.v2nodes.com] vless- #13'
   type: vless
   server: 147.93.173.45
   port: 10444
@@ -2866,7 +2615,7 @@ proxies:
   tls: true
   servername: video.yandex.ru
   flow: xtls-rprx-vision
-- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
   type: vless
   server: 139.162.27.96
   port: 2096
@@ -2879,54 +2628,6 @@ proxies:
     path: /free-server.techsonic.devfp=chrome
     headers:
       Host: free-server.techsonic.dev
-- name: 🇸🇬[www.v2nodes.com] vless-SG-9...
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: ec24cde1-6bd9-4b69-baf7-270e8aabd6dd
-  encryption: none
-  tls: true
-  servername: rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV
-  network: ws
-  ws-opts:
-    path: /?ed=2560fp=unsafe
-    headers:
-      Host: rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV
-- name: 🇸🇬[www.v2nodes.com] vless-SG-8...
-  type: vless
-  server: cf.090227.xyz
-  port: 8443
-  uuid: 889fa37f-6bce-4674-8a49-1cc435e11de7
-  encryption: none
-  network: ws
-  ws-opts:
-    path: /proxyip=ProxyIP.SG.CMLiussss.Netsecurity=tls
-    headers:
-      Host: liusuyan.cc.cd
-- name: 🇸🇬[www.v2nodes.com] vless-SG-7...
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: ec24cde1-6bd9-4b69-baf7-270e8aabd6dd
-  encryption: none
-  network: ws
-  ws-opts:
-    path: /?ed=2560fp=unsafesecurity=tls
-    headers:
-      Host: rayAN21-6yU73878-v3.raYAn-21.woRKers.dEV
-- name: '🏳[www.v2nodes.com] vless- #16'
-  type: vless
-  server: 172.67.131.125
-  port: 2083
-  uuid: f418674e-f518-4318-8ff9-e10000000046
-  encryption: none
-  tls: true
-  servername: smart-edge-424.arti98399-1905.workers.dev
-  network: ws
-  ws-opts:
-    path: /syncfp=chrome
-    headers:
-      Host: smart-edge-424.arti98399-1905.workers.dev
 - name: 🇸🇬[www.v2nodes.com] vless-SG-4...
   type: vless
   server: 104.18.35.86
@@ -2940,6 +2641,65 @@ proxies:
     path: /fp=unsafe
     headers:
       Host: vlsovip.1d.mom
+- name: 🇸🇬[www.v2nodes.com] vless-SG-3...
+  type: vless
+  server: 188.114.98.0
+  port: 443
+  uuid: d4733e5a-5850-4523-942e-f28f82ebf4a9
+  encryption: none
+  network: ws
+  ws-opts:
+    path: /?TELEGRAM--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI?ed=2560fp=chromesecurity=tls
+    headers:
+      Host: party-5cn.pages.dev
+- name: 🇸🇬[www.v2nodes.com] vless-SG-2...
+  type: vless
+  server: 104.25.0.1
+  port: 2096
+  uuid: 341832cc-ba98-425b-8225-b3db621a0da3
+  encryption: none
+  network: ws
+  ws-opts:
+    path: /fp=chromesecurity=tls
+    headers:
+      Host: rainfall0705.cc.cd
+- name: '🇸🇬[www.v2nodes.com] vless-SG-2... #1'
+  type: vless
+  server: saas.sin.fan
+  port: 443
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  encryption: none
+  tls: true
+  servername: vp19.1145678.xyz
+  network: ws
+  ws-opts:
+    path: /images/classify/dhfp=chrome
+    headers:
+      Host: vp19.1145678.xyz
+- name: '🏳[www.v2nodes.com] vless- #14'
+  type: vless
+  server: yd.2.hhhhh.eu.org
+  port: 443
+  uuid: f0d6aa7c-0b34-4b68-9af8-1ea5e0b39bdc
+  encryption: none
+  tls: true
+  servername: ssj-wkg.pages.dev
+  network: ws
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ssj-wkg.pages.dev
+- name: '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
+  type: vless
+  server: 172.66.170.172
+  port: 80
+  uuid: e081da45-9fae-4687-9376-f9a6a0dbbe83
+  encryption: none
+  network: ws
+  ws-opts:
+    path: /id-amz
+    headers:
+      Host: e33xr.qzz.io
 - name: 🇹🇭[www.v2nodes.com] vless-TH-1...
   type: vless
   server: www.true.th
@@ -2951,7 +2711,15 @@ proxies:
     path: /
     headers:
       Host: dcm4kwis2exkw.cloudfront.net
-- name: '🏳[www.v2nodes.com] vless- #17'
+- name: 🇹🇷[www.v2nodes.com] vless-TR-1...
+  type: vless
+  server: 13.143.197.74
+  port: 8443
+  uuid: 12910384-1ef8-40a3-818a-57277063ea66
+  encryption: none
+  tls: true
+  servername: kk-tr-74.testkknegr.online
+- name: '🏳[www.v2nodes.com] vless- #15'
   type: vless
   server: 185.246.155.91
   port: 10103
@@ -2983,17 +2751,6 @@ proxies:
   servername: www.cloudflare.com
 - name: 🇺🇸[www.v2nodes.com] vless-US-1...
   type: vless
-  server: sajed.kdns.fr
-  port: 443
-  uuid: 8e40cd7b-ce15-4887-8fe2-0af534a941a2
-  encryption: none
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sajed.kdns.fr
-- name: '🇺🇸[www.v2nodes.com] vless-US-1... #1'
-  type: vless
   server: 143.246.60.254
   port: 443
   uuid: fa895069-bfe5-42c9-9f30-f918e1e442c1
@@ -3001,16 +2758,7 @@ proxies:
   tls: true
   servername: www.cloudflare.com
   flow: xtls-rprx-vision
-- name: '🇺🇸[www.v2nodes.com] vless-US-1... #2'
-  type: vless
-  server: 45.61.186.3
-  port: 443
-  uuid: 140d6fc9-2c6d-41bd-a487-182b52c0184f
-  encryption: none
-  tls: true
-  servername: caissuers.microsoft.com
-  flow: xtls-rprx-vision
-- name: '🇺🇸[www.v2nodes.com] vless-US-1... #3'
+- name: '🇺🇸[www.v2nodes.com] vless-US-1... #1'
   type: vless
   server: 147.224.54.25
   port: 2053
@@ -3018,28 +2766,7 @@ proxies:
   encryption: none
   tls: true
   servername: www.cloudflare.com
-- name: '🇺🇸[www.v2nodes.com] vless-US-1... #4'
-  type: vless
-  server: 0592efg.us8.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 0592efg.us8.h1clayd.click
-- name: '🏳[www.v2nodes.com] vless- #18'
-  type: vless
-  server: 199.232.78.120
-  port: 443
-  uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
-  encryption: none
-  tls: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: usaslioijji.global.ssl.fastly.net.
-- name: '🇺🇸[www.v2nodes.com] vless-US-1... #5'
+- name: '🇺🇸[www.v2nodes.com] vless-US-1... #2'
   type: vless
   server: 199.232.78.160
   port: 443
@@ -3052,37 +2779,7 @@ proxies:
     path: /fp=chrome
     headers:
       Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
-- name: '🇺🇸[www.v2nodes.com] vless-US-1... #6'
-  type: vless
-  server: 143.246.62.191
-  port: 8443
-  uuid: eb8c97f7-a154-4442-91b0-54c0d055ad0b
-  encryption: none
-  tls: true
-  servername: github.githubassets.com
-- name: '🏳[www.v2nodes.com] vless- #19'
-  type: vless
-  server: 216.152.155.189
-  port: 443
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  encryption: none
-  tls: true
-  servername: www.apple.com
-  flow: xtls-rprx-vision
-- name: '🏳[www.v2nodes.com] vless- #20'
-  type: vless
-  server: 199.232.78.159
-  port: 443
-  uuid: 97e0ea78-67ae-4984-8a14-a7d1a51e58de
-  encryption: none
-  tls: true
-  servername: cdn.akamai.steamstatic.com
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: copy_az_channel_NUFiLTER_8i.global.ssl.fastly.net.
-- name: '🇺🇸[www.v2nodes.com] vless-US-1... #7'
+- name: '🇺🇸[www.v2nodes.com] vless-US-1... #3'
   type: vless
   server: 148.135.86.162
   port: 10000
@@ -3091,7 +2788,7 @@ proxies:
   tls: true
   servername: addons.mozilla.org
   flow: xtls-rprx-vision
-- name: '🇺🇸[www.v2nodes.com] vless-US-1... #8'
+- name: '🇺🇸[www.v2nodes.com] vless-US-1... #4'
   type: vless
   server: 156.229.167.109
   port: 8443
@@ -3099,7 +2796,25 @@ proxies:
   encryption: none
   tls: true
   servername: github.githubassets.com
-- name: 🇩🇪DE_6|2.3MB/s
+- name: 🇻🇳[www.v2nodes.com] vless-VN-1...
+  type: vless
+  server: 150.95.109.109
+  port: 2086
+  uuid: b83faafc-cbb7-4655-99d4-2c4c39a49d1b
+  encryption: none
+- name: 🇨🇦[www.v2nodes.com] ss-CA-1546...
+  type: ss
+  server: 51.222.155.113
+  port: 5601
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+- name: '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
+  type: ss
+  server: 51.222.155.32
+  port: 5003
+  cipher: aes-256-gcm
+  password: g5MeD6Ft3CWlJId
+- name: 🇩🇪[www.v2nodes.com] ss-DE-1623...
   type: ss
   server: 130.61.145.251
   port: 59924
@@ -3111,27 +2826,82 @@ proxies:
   port: 443
   cipher: 2022-blake3-chacha20-poly1305
   password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-- name: '🏳[www.v2nodes.com] ss- #15'
+- name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  type: ss
+  server: 115.161.136.145
+  port: 10099
+  cipher: chacha20-ietf-poly1305
+  password: '12242'
+- name: '🏳[www.v2nodes.com] ss- #11'
   type: ss
   server: 54.36.174.140
   port: 443
   cipher: chacha20-ietf-poly1305
   password: eetk7pw
-- name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
+- name: 🇺🇸[www.v2nodes.com] ss-US-1612...
   type: ss
-  server: 194.68.44.42
-  port: 64546
+  server: 138.197.89.234
+  port: 28960
   cipher: chacha20-ietf-poly1305
-  password: U83u9OGpvSatIUW7LsWffr
-- name: 🇷🇺[www.v2nodes.com] ss-RU-1163...
-  type: ss
-  server: 90.156.203.62
-  port: 5112
-  cipher: chacha20-ietf-poly1305
-  password: VVlAff77CnAU43Aoc5j15Y
+  password: DZRy4Q3QH0jUGfKFl2jDCZ
 - name: 🇧🇷[www.v2nodes.com] trojan-BR-...
   type: trojan
   server: 216.238.104.154
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: 🇨🇦[www.v2nodes.com] trojan-CA-...
+  type: trojan
+  server: 216.152.147.152
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: '🏳[www.v2nodes.com] trojan- #1'
+  type: trojan
+  server: 216.152.147.74
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #2'
+  type: trojan
+  server: 216.152.147.93
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: connectingpeoplewithgreatjobs.com
+- name: '🇨🇦[www.v2nodes.com] trojan-CA-... #3'
+  type: trojan
+  server: 216.152.147.79
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: blog.connectingpeoplewithgreatjobs.com
+- name: '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
+  type: trojan
+  server: 208.69.78.33
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.yourultimateprofessionalcareerhub.com
+- name: '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
+  type: trojan
+  server: 193.108.119.96
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: learn.iloverussia2026.com
+- name: '🏳[www.v2nodes.com] trojan- #4'
+  type: trojan
+  server: 193.108.119.15
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: courses.iloverussia2026.com
+- name: '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  type: trojan
+  server: 66.163.118.203
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: '🏳[www.v2nodes.com] trojan- #6'
+  type: trojan
+  server: 66.163.118.244
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+- name: '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
+  type: trojan
+  server: 66.163.118.40
   port: 443
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
 - name: '🇳🇬[www.v2nodes.com] trojan-NG-... #1'
@@ -3140,12 +2910,11 @@ proxies:
   port: 20103
   password: d7563108-615c-4338-a7bd-77f359869a4a
   sni: hk.catxstar.com
-- name: 🇹🇷[www.v2nodes.com] trojan-TR-...
+- name: '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   type: trojan
-  server: sclass-b1.catcat321.com
-  port: 20027
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  sni: hk.catxstar.com
+  server: 66.163.127.215
+  port: 443
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
 - name: 日本|@ripaojiedian
   type: vless
   server: 139.162.91.239
@@ -3227,23 +2996,7 @@ proxies:
   port: 443
   password: Mitivpn
   sni: ssl.fastly.com
-- name: '🇩🇪 德国 | DEU #2'
-  type: vless
-  server: 191.217.206.147
-  port: 9443
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  encryption: none
-  tls: true
-  servername: fin.krabvpn.pro
-- name: '🇩🇪 德国 | DEU #4'
-  type: vless
-  server: 191.217.206.147
-  port: 9443
-  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
-  encryption: none
-  tls: true
-  servername: fin.krabvpn.pro
-- name: '🇩🇪 德国 | DEU #6'
+- name: '🇩🇪 德国 | DEU #7'
   type: vless
   server: 2.27.14.122
   port: 8443
@@ -3251,6 +3004,65 @@ proxies:
   encryption: none
   tls: true
   servername: de.krabvpn.pro
+- name: '🇩🇪 德国 | DEU #1'
+  type: vless
+  server: 2.27.14.122
+  port: 8443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  encryption: none
+  tls: true
+  servername: de.krabvpn.pro
+- name: '🇩🇪 德国 | DEU #2'
+  type: vless
+  server: orchard.elvano.website
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: orchard.elvano.website
+- name: '🇩🇪 德国 | DEU #3'
+  type: vless
+  server: sunfield.moltex.click
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: sunfield.moltex.click
+- name: '🇩🇪 德国 | DEU #4'
+  type: vless
+  server: harbor.gerqix.online
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: harbor.gerqix.online
+  network: ws
+  ws-opts:
+    path: /api/de1/streamfp=firefox
+    headers:
+      Host: harbor.gerqix.online
+- name: '🇩🇪 德国 | DEU #5'
+  type: vless
+  server: 78.17.96.242
+  port: 443
+  uuid: 5727f9a4-42d9-4569-8016-0e1098da37ec
+  encryption: none
+  tls: true
+  servername: sub.salasnik.fun
+  flow: xtls-rprx-vision
+- name: '🇩🇪 德国 | DEU #6'
+  type: vless
+  server: quay.gerqix.online
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: quay.gerqix.online
+  network: ws
+  ws-opts:
+    path: /api/de2/streamfp=firefox
+    headers:
+      Host: quay.gerqix.online
 - name: '🇩🇪 德国 | DEU #8'
   type: ss
   server: 47.85.162.44
@@ -3259,269 +3071,85 @@ proxies:
   password: 3NBsnBLanPfG6i3S2GTHineswr6EeSJPb0PCeMQoGoA=
 - name: '🇩🇪 德国 | DEU #9'
   type: vless
-  server: 191.217.206.147
+  server: pigment.merlano.monster
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: pigment.merlano.monster
+- name: '🇩🇪 德国 | DEU #10'
+  type: vless
+  server: 46.243.205.192
+  port: 443
+  uuid: fd90e601-a56c-42b8-aab7-aa02d26fcb04
+  encryption: none
+  tls: true
+  servername: 46.243.205.192
+  network: ws
+  ws-opts:
+    path: /catalog/feed/H9eui7WsW3xSfp=chrome
+    headers:
+      Host: 46.243.205.192
+- name: 🇩🇪 德国 | DEU 11
+  type: vless
+  server: almanac.filnex.baby
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: morningfen.merlano.monster
+- name: 🇩🇪 德国 | DEU 12
+  type: vless
+  server: 129.101.100.49
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: fernglade.gerqix.online
+- name: '🇩🇪 德国 | DEU #13'
+  type: vless
+  server: ws3.falmero.store
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: canvas.merlano.monster
+  network: ws
+  ws-opts:
+    path: /api/de1/streamfp=android
+    headers:
+      Host: ws3.falmero.store
+- name: '🇩🇪 德国 | DEU #14'
+  type: vless
+  server: devlayer.tech
   port: 8443
-  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
   encryption: none
   tls: true
   servername: de.krabvpn.pro
-- name: '🇩🇪 德国 | DEU #12'
+- name: '🇩🇪 德国 | DEU #15'
   type: vless
-  server: 2.27.14.122
-  port: 9443
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  encryption: none
-  tls: true
-  servername: fin.krabvpn.pro
-- name: '🇳🇱 荷兰 | NLD #1'
-  type: vless
-  server: 191.217.206.147
-  port: 6443
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  encryption: none
-  tls: true
-  servername: nl.krabvpn.pro
-- name: '🇳🇱 荷兰 | NLD #6'
-  type: vless
-  server: 136.148.208.221
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  encryption: none
-  tls: true
-  servername: 8a2e72t.nl20.h1clayd.shop
-  flow: xtls-rprx-vision
-- name: '🇸🇪 瑞典 | SWE #2'
-  type: vless
-  server: 191.217.206.147
-  port: 443
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  encryption: none
-  tls: true
-  servername: sw.krabvpn.pro
-- name: '🇸🇪 瑞典 | SWE #3'
-  type: vless
-  server: 191.217.206.147
-  port: 7443
-  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
-  encryption: none
-  tls: true
-  servername: pl-origin.krabvpn.pro
-- name: 🇺🇸 美国 | USA 2
-  type: vless
-  server: 162.35.101.177
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 0592efg.us8.h1clayd.click
-- name: '🇺🇸 美国 | USA #4'
-  type: vless
-  server: ryanserver.ir
-  port: 18434
-  uuid: Inetiran
-  encryption: none
-- name: 🇳🇱NL_3|1.8MB/s
-  type: vless
-  server: 171.22.133.5
-  port: 6443
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  encryption: none
-  tls: true
-  servername: nl.krabvpn.pro
-- name: 🇩🇪DE_4|1.6MB/s
-  type: vless
-  server: 46.247.109.129
-  port: 443
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  encryption: none
-  tls: true
-  servername: auto-2.storagedirectguide.com
-  flow: xtls-rprx-vision-udp443
-- name: 🇩🇪DE_5|1.6MB/s
-  type: vless
-  server: 37.114.37.192
-  port: 443
-  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
-  encryption: none
-  tls: true
-  servername: api-mod.storagedirectguide.com
-- name: 🇫🇮FI_5|1.1MB/s
-  type: vless
-  server: 171.22.133.5
-  port: 9443
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  encryption: none
-  tls: true
-  servername: fin.krabvpn.pro
-- name: socks5
-  type: socks5
-  server: 103.248.150.50
-  port: 42000
-  username: paZFN3JA
-  password: EGJDy5Kg
-- name: socks5-1
-  type: socks5
-  server: 144.225.47.68
-  port: 42000
-  username: DJy1T0dt
-  password: sZnD8GTz
-- name: socks5-2
-  type: socks5
-  server: 103.14.164.30
-  port: 42000
-  username: route164JIa2CBPxfy
-  password: VAwyJQX0iKMJiyCw5UVK9wGH
-- name: socks5-3
-  type: socks5
-  server: 94.194.164.203
-  port: 62000
-  username: rVkkraqT
-  password: 2j7CCZQb
-- name: 🇳🇱NL_10|1.1MB/s
-  type: vless
-  server: 196.196.148.63
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 717252g.nl8.h1clayd.click
-- name: 🇳🇱NL_11|2.9MB/s
-  type: vless
-  server: 89.125.136.56
-  port: 8080
-  uuid: FastKey_446172
-  encryption: none
-- name: socks5-4
-  type: socks5
-  server: 47.107.48.145
-  port: 8020
-- name: 🇳🇱NL_12|1.6MB/s
-  type: vless
-  server: 172.67.217.241
-  port: 443
-  uuid: 1c0250ec-2dbc-40be-bd18-90b5e812ceaa
-  encryption: none
-  tls: true
-  servername: pg.fm6dw.dpdns.org
-  network: ws
-  ws-opts:
-    path: /?ed=2048fp=chrome
-    headers:
-      Host: pg.fm6dw.dpdns.org
-- name: 🇫🇮FI_6|2.7MB/s
-  type: vless
-  server: 171.22.133.101
-  port: 443
-  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
-  encryption: none
-  tls: true
-  servername: fin.krabvpn.pro
-- name: socks5-5
-  type: socks5
-  server: 43.133.21.24
-  port: 3001
-- name: socks5-6
-  type: socks5
-  server: 144.225.47.158
-  port: 42000
-  username: DJy1T0dt
-  password: sZnD8GTz
-- name: 🇩🇪DE_10|2.6MB/s
-  type: trojan
-  server: russia.com
-  port: 443
-  password: bpb-trojan
-  sni: kargar001.pages.dev
-- name: 🇦🇲AM_1|1.7MB/s
-  type: vless
-  server: 77.91.68.117
-  port: 443
-  uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
-  encryption: none
-  tls: true
-  servername: cf-1rm.pages.dev
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: cf-1rm.pages.dev
-- name: 🇩🇪DE_11|2.7MB/s
-  type: vless
-  server: 172.67.74.177
+  server: 78.17.96.242
   port: 2083
-  uuid: bba95b1f-f48c-454b-897b-a6c6bc307df1
+  uuid: 5727f9a4-42d9-4569-8016-0e1098da37ec
   encryption: none
   tls: true
-  servername: edge.yzkvm.top
+  servername: sub.salasnik.fun
+  flow: xtls-rprx-vision
+- name: '🇩🇪 德国 | DEU #16'
+  type: vless
+  server: foliose.merlano.monster
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: foliose.merlano.monster
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /api/de2/streamfp=firefox
     headers:
-      Host: edge.yzkvm.top
-- name: 🇮🇹IT_8|3.3MB/s
-  type: vless
-  server: 4.232.64.201
-  port: 443
-  uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
-  encryption: none
-  tls: true
-  servername: cf-1rm.pages.dev
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: cf-1rm.pages.dev
-- name: 🇸🇪SE_1|1.2MB/s
-  type: vless
-  server: 31.56.227.253
-  port: 443
-  uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
-  encryption: none
-  tls: true
-  servername: cf-1rm.pages.dev
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: cf-1rm.pages.dev
-- name: 🇺🇸US_7|3.5MB/s
-  type: vless
-  server: 104.168.132.123
-  port: 443
-  uuid: 5e610f80-fc6a-479d-8621-b672355b96a1
-  encryption: none
-  tls: true
-  servername: cf-1rm.pages.dev
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: cf-1rm.pages.dev
-- name: '🇦🇱 AL_21 #1'
-  type: vless
-  server: 196.196.148.85
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-- name: 🇦🇱 AL_22
-  type: vless
-  server: 196.245.52.183
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 15b171g.nl7.h1clayd.click
-- name: '🇦🇱 AL_23 #1'
-  type: vless
-  server: 5d0319t.nl7.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 5d0319t.nl7.h1clayd.click
-- name: '🇩🇪 德国 | DEU #3'
+      Host: foliose.merlano.monster
+- name: '🇩🇪 德国 | DEU #17'
   type: vless
   server: devlayer.tech
   port: 9443
@@ -3529,67 +3157,27 @@ proxies:
   encryption: none
   tls: true
   servername: fin.krabvpn.pro
-- name: '🇩🇪 德国 | DEU #5'
+- name: '🇩🇪 德国 | DEU #18'
   type: vless
-  server: 193.160.208.240
+  server: vellum.merlano.monster
   port: 443
-  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
   encryption: none
   tls: true
-  servername: 193.160.208.240
-- name: '🇩🇪 德国 | DEU #7'
-  type: vless
-  server: 345739t.de15.h1clayd.click
-  port: 443
-  uuid: 95c2ba1e-a330-4e6b-bd81-bf9c0f647b2f
-  encryption: none
-  tls: true
-  servername: 345739t.de15.h1clayd.click
-- name: '🇩🇪 德国 | DEU #10'
-  type: vless
-  server: 172.64.79.163
-  port: 2083
-  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
-  encryption: none
-  tls: true
-  servername: vipfree.dr-ping.ir
+  servername: sequoia.merlano.monster
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /api/de1/streamfp=android
     headers:
-      Host: vipfree.dr-ping.ir
-- name: '🇩🇪 德国 | DEU #11'
+      Host: vellum.merlano.monster
+- name: '🇩🇪 德国 | DEU #19'
   type: vless
-  server: 104.17.145.145
-  port: 2083
-  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
+  server: 191.217.206.147
+  port: 9443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
   encryption: none
   tls: true
-  servername: vipfree.dr-ping.ir
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: vipfree.dr-ping.ir
-- name: '🇩🇪 德国 | DEU #13'
-  type: vless
-  server: free-config-bot-development-33s35.lucity.app
-  port: 443
-  uuid: 474c5a2e-96eb-fa3f-6639-cbd2129c8027
-  encryption: none
-  tls: true
-  servername: free-config-bot-development-33s35.lucity.app
-  network: ws
-  ws-opts:
-    path: /ws/474c5a2e-96eb-fa3f-6639-cbd2129c8027fp=firefox
-    headers:
-      Host: free-config-bot-development-33s35.lucity.app
-- name: 🇩🇪 德国 | DEU 14
-  type: trojan
-  server: alireza.karamoz1.ir
-  port: 443
-  password: poimnap
-  sni: alireza.karamoz1.ir
+  servername: fin.krabvpn.pro
 - name: '🇪🇪 爱沙尼亚 | EST #1'
   type: vless
   server: 5.129.202.80
@@ -3599,45 +3187,54 @@ proxies:
   tls: true
   servername: mirror-50.topp-con.xyz
   flow: xtls-rprx-vision
-- name: '🇬🇧 英国 | GBR #1'
+- name: '🇫🇷 法国 | FRA #1'
   type: vless
-  server: free.fugui.lol
-  port: 62015
-  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+  server: 194.113.235.183
+  port: 443
+  uuid: 08452ee9-1653-4d08-8d83-6cb0528dad13
   encryption: none
   tls: true
-  servername: swdist.apple.com
+  servername: fr-3.quillrook.com
   flow: xtls-rprx-vision
-- name: '🇰🇷 韩国 | KOR #2'
-  type: hysteria2
-  server: 3.36.48.199
-  port: 443
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  sni: www.bing.com
-- name: '🇰🇷 韩国 | KOR #3'
+- name: '🇬🇧 英国 | GBR #1'
   type: vless
-  server: vl-x1.qz10086.top
-  port: 38011
-  uuid: 79fedc87-b0c7-4525-9188-10cb3cb26eb4
+  server: 191.217.206.147
+  port: 8443
+  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
+  encryption: none
+  tls: true
+  servername: de.krabvpn.pro
+- name: '🇭🇰 香港 | HKG #2'
+  type: vless
+  server: 8.217.1.203
+  port: 8443
+  uuid: 8b17beac-b143-447d-aa68-14cbb121a602
   encryption: none
   tls: true
   servername: www.apple.com
   flow: xtls-rprx-vision
-- name: '🇳🇬 尼日利亚 | NGA #1'
-  type: trojan
-  server: sclass-b1.catcat321.com
-  port: 20051
-  password: d7563108-615c-4338-a7bd-77f359869a4a
-  sni: hk.catxstar.com
-- name: '🇳🇱 荷兰 | NLD #2'
-  type: vless
-  server: 8a2e72t.nl20.h1clayd.shop
+- name: '🇰🇷 韩国 | KOR #2'
+  type: hysteria2
+  server: 43.201.150.9
   port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  sni: www.bing.com
+- name: '🇳🇱 荷兰 | NLD #1'
+  type: vless
+  server: devlayer.tech
+  port: 6443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
   encryption: none
   tls: true
-  servername: 8a2e72t.nl20.h1clayd.shop
-  flow: xtls-rprx-vision
+  servername: nl.krabvpn.pro
+- name: '🇳🇱 荷兰 | NLD #2'
+  type: vless
+  server: 191.217.206.147
+  port: 6443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  encryption: none
+  tls: true
+  servername: nl.krabvpn.pro
 - name: '🇳🇱 荷兰 | NLD #3'
   type: vless
   server: 196.196.148.63
@@ -3646,108 +3243,7 @@ proxies:
   encryption: none
   tls: true
   servername: fc82dfx.nl8.h1clayd.click
-- name: '🇳🇱 荷兰 | NLD #4'
-  type: vless
-  server: 201.34.142.108
-  port: 443
-  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-  encryption: none
-  tls: true
-- name: '🇳🇱 荷兰 | NLD #5'
-  type: vless
-  server: fc82dfx.nl8.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: fc82dfx.nl8.h1clayd.click
-- name: '🇳🇱 荷兰 | NLD #7'
-  type: vless
-  server: 80cb66x.nl13.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 80cb66x.nl13.h1clayd.click
-- name: 🇷🇺 俄罗斯 | RUS
-  type: vless
-  server: 201.51.12.98
-  port: 443
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-  encryption: none
-  tls: true
-  servername: vps3.nemnogogo.com
-- name: '🇷🇺 俄罗斯 | RUS #3'
-  type: vless
-  server: 80cb66x.nl17.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 80cb66x.nl17.h1clayd.click
-- name: '🇸🇪 瑞典 | SWE #4'
-  type: vless
-  server: 191.217.206.147
-  port: 7443
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  encryption: none
-  tls: true
-  servername: pl-origin.krabvpn.pro
-- name: '🇸🇪 瑞典 | SWE #5'
-  type: vless
-  server: 88.216.60.73
-  port: 443
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
-  encryption: none
-  tls: true
-  servername: ns-api-gw.galioncc.com
-- name: '🇸🇬 新加坡 | SGP #2'
-  type: hysteria2
-  server: 52.221.227.252
-  port: 443
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  sni: www.bing.com
-- name: '🇹🇷 土耳其 | TUR #1'
-  type: vless
-  server: gold.jafarghasemiturkk.ir
-  port: 8080
-  uuid: 4f9f03f9-39e9-4879-8f10-0eccf859aafd
-  encryption: none
-  network: ws
-  ws-opts:
-    path: /flow=xtls-rprx-vision
-    headers:
-      Host: gold.jafarghasemiturkk.ir
-- name: '🇺🇸 美国 | USA #1'
-  type: vless
-  server: sub.macdonalder.cyou
-  port: 56221
-  uuid: 4259bc76-37e3-49a6-b958-5913c41a9683
-  encryption: none
-  tls: true
-  servername: sub.macdonalder.cyou
-  network: ws
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: sub.macdonalder.cyou
-- name: '🇺🇸 美国 | USA #5'
-  type: vless
-  server: 196.245.52.187
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 35295cx.us8.h1clayd.click
-- name: '🇺🇸 美国 | USA #8'
-  type: vless
-  server: 13.141.51.2
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-  tls: true
-  servername: 04535dt.us8.h1clayd.click
-- name: '🇦🇱 AL_22 #1'
+- name: 🇳🇱 荷兰 | NLD 4
   type: vless
   server: 196.245.52.183
   port: 443
@@ -3755,13 +3251,30 @@ proxies:
   encryption: none
   tls: true
   servername: 15b171g.nl7.h1clayd.click
-- name: '🇩🇪 德国 | DEU #1'
-  type: hysteria2
-  server: 77.90.15.183
-  port: 8964
-  password: HATATEAYA
-  sni: ganlanc.at
-- name: '🇷🇺 俄罗斯 | RUS #1'
+- name: '🇳🇱 荷兰 | NLD #5'
+  type: vless
+  server: 201.34.142.108
+  port: 443
+  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
+  encryption: none
+  tls: true
+- name: '🇵🇱 波兰 | POL #1'
+  type: vless
+  server: 143.246.41.214
+  port: 443
+  uuid: be146d46-ae50-4691-838c-b6c87dbaec8f
+  encryption: none
+  tls: true
+  servername: 702e56t.pl5.h1clayd.click
+- name: 🇷🇺 俄罗斯 | RUS
+  type: vless
+  server: vps3.nemnogogo.com
+  port: 443
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  encryption: none
+  tls: true
+  servername: vps3.nemnogogo.com
+- name: 🇷🇺 俄罗斯 | RUS 3
   type: vless
   server: 201.51.12.98
   port: 443
@@ -3769,7 +3282,173 @@ proxies:
   encryption: none
   tls: true
   servername: vps3.nemnogogo.com
+- name: '🇸🇪 瑞典 | SWE #1'
+  type: vless
+  server: 191.217.206.147
+  port: 7443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  encryption: none
+  tls: true
+  servername: pl-origin.krabvpn.pro
+- name: '🇸🇪 瑞典 | SWE #2'
+  type: vless
+  server: 2.27.14.122
+  port: 7443
+  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
+  encryption: none
+  tls: true
+  servername: pl-origin.krabvpn.pro
+- name: '🇸🇪 瑞典 | SWE #3'
+  type: vless
+  server: 2.27.14.122
+  port: 5443
+  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
+  encryption: none
+  tls: true
+  servername: sw.krabvpn.pro
+- name: '🇸🇪 瑞典 | SWE #4'
+  type: vless
+  server: 2.27.14.122
+  port: 5443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  encryption: none
+  tls: true
+  servername: sw.krabvpn.pro
+- name: '🇸🇪 瑞典 | SWE #5'
+  type: vless
+  server: 191.217.206.147
+  port: 443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  encryption: none
+  tls: true
+  servername: sw.krabvpn.pro
+- name: '🇸🇪 瑞典 | SWE #6'
+  type: vless
+  server: 191.217.206.147
+  port: 7443
+  uuid: 67864856-8730-40cc-9e1a-a0df697d912b
+  encryption: none
+  tls: true
+  servername: pl-origin.krabvpn.pro
+- name: '🇸🇪 瑞典 | SWE #7'
+  type: vless
+  server: 88.216.60.73
+  port: 443
+  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  encryption: none
+  tls: true
+  servername: ns-api-gw.galioncc.com
+- name: 🇸🇪 瑞典 | SWE 8
+  type: trojan
+  server: 95.143.196.32
+  port: 443
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  sni: connect-se.mimowhat.online
+- name: '🇸🇪 瑞典 | SWE #9'
+  type: vless
+  server: devlayer.tech
+  port: 5443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  encryption: none
+  tls: true
+  servername: sw.krabvpn.pro
+- name: '🇸🇬 新加坡 | SGP #2'
+  type: hysteria2
+  server: 13.229.50.232
+  port: 443
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  sni: www.bing.com
+- name: '🇺🇸 美国 | USA #2'
+  type: vless
+  server: sparkling-gadabout.quick-cdn.net
+  port: 443
+  uuid: ec5bf19c-9eb0-410e-a3de-17b6befd09f1
+  encryption: none
+  tls: true
+  servername: sparkling-gadabout.quick-cdn.net
+  network: ws
+  ws-opts:
+    path: /wsfp=chrome
+    headers:
+      Host: sparkling-gadabout.quick-cdn.net
+- name: 🇺🇸 美国 | USA 4
+  type: vless
+  server: 89.124.122.19
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  encryption: none
+  tls: true
+  servername: 0592efg.us8.h1clayd.click
+- name: '🇺🇸 美国 | USA #5'
+  type: vless
+  server: 04535dt.us8.h1clayd.click
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  encryption: none
+  tls: true
+  servername: 04535dt.us8.h1clayd.click
+- name: '🇺🇸 美国 | USA #6'
+  type: vless
+  server: bookend.filnex.baby
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: hollowreed.gerqix.online
+  network: ws
+  ws-opts:
+    path: /api/de1/streamfp=android
+    headers:
+      Host: bookend.filnex.baby
+- name: '🇩🇪 德国 | DEU #11'
+  type: vless
+  server: almanac.filnex.baby
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: morningfen.merlano.monster
+- name: '🇩🇪 德国 | DEU #12'
+  type: vless
+  server: 129.101.100.49
+  port: 443
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+  encryption: none
+  tls: true
+  servername: fernglade.gerqix.online
+- name: '🇳🇱 荷兰 | NLD #4'
+  type: vless
+  server: 196.245.52.183
+  port: 443
+  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+  encryption: none
+  tls: true
+  servername: 15b171g.nl7.h1clayd.click
+- name: '🇷🇺 俄罗斯 | RUS #1'
+  type: vless
+  server: vps3.nemnogogo.com
+  port: 443
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  encryption: none
+  tls: true
+  servername: vps3.nemnogogo.com
 - name: '🇷🇺 俄罗斯 | RUS #2'
+  type: vless
+  server: xssite.webredirect.org
+  port: 443
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  encryption: none
+  tls: true
+  servername: xssite.webredirect.org
+- name: '🇷🇺 俄罗斯 | RUS #3'
+  type: vless
+  server: 201.51.12.98
+  port: 443
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  encryption: none
+  tls: true
+  servername: vps3.nemnogogo.com
+- name: '🇷🇺 俄罗斯 | RUS #4'
   type: vless
   server: 201.24.116.192
   port: 443
@@ -3777,20 +3456,20 @@ proxies:
   encryption: none
   tls: true
   servername: vps3.nemnogogo.com
-- name: '🇺🇸 美国 | USA #2'
+- name: '🇸🇪 瑞典 | SWE #8'
+  type: trojan
+  server: 95.143.196.32
+  port: 443
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
+  sni: connect-se.mimowhat.online
+- name: '🇺🇸 美国 | USA #4'
   type: vless
-  server: 162.35.101.177
+  server: 89.124.122.19
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   encryption: none
   tls: true
   servername: 0592efg.us8.h1clayd.click
-- name: '🇺🇸 美国 | USA #6'
-  type: hysteria2
-  server: sub.macdonalder.cyou
-  port: 16146
-  password: u9axzkplfc3463am
-  sni: sub.macdonalder.cyou
 - name: AT_speednode_0001
   type: vless
   server: au2.pad-sservice.lat
@@ -3841,21 +3520,42 @@ proxies:
   password: ''
 - name: 🇩🇪 机场推荐:dafei.de 德国 24
   type: vless
-  server: www.hyby.ir
-  port: 2087
-  uuid: 316acccc-720d-499e-a92d-9caa7a26c495
+  server: chess.com
+  port: 443
+  uuid: 0280c276-641b-49af-b699-4931c30ac137
   encryption: none
   tls: true
-  servername: www.hyby.ir
+  servername: norway.xn--nlqaa425dbaab446bbabd698meae.online.
 - name: 🇩🇪 机场推荐:dafei.de 德国 26
-  type: socks5
-  server: 91.107.179.68
-  port: 10809
-  username: Og==
-  password: ''
+  type: vless
+  server: 37.114.37.192
+  port: 443
+  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
+  encryption: none
 - name: 🇩🇪 机场推荐:dafei.de 德国 27
   type: vless
-  server: chess.com
+  server: free-config-bot-development-33s35.lucity.app
+  port: 443
+  uuid: 474c5a2e-96eb-fa3f-6639-cbd2129c8027
+  encryption: none
+  tls: true
+  servername: free-config-bot-development-33s35.lucity.app
+  network: ws
+  ws-opts:
+    path: /ws/474c5a2e-96eb-fa3f-6639-cbd2129c8027
+    headers:
+      Host: free-config-bot-development-33s35.lucity.app
+- name: 🇩🇪 机场推荐:dafei.de 德国 28
+  type: vless
+  server: 104.18.138.67
+  port: 443
+  uuid: 0280c276-641b-49af-b699-4931c30ac137
+  encryption: none
+  tls: true
+  servername: norway.xn--nlqaa425dbaab446bbabd698meae.online.
+- name: 🇩🇪 机场推荐:dafei.de 德国 29
+  type: vless
+  server: 104.18.139.67
   port: 443
   uuid: 0280c276-641b-49af-b699-4931c30ac137
   encryption: none
@@ -3875,7 +3575,35 @@ proxies:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
+- name: 🇺🇸 机场推荐:dafei.de 美国 13
+  type: vmess
+  server: guanwang.awsno.com
+  port: 443
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: guanwang.awsno.com
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
 - name: 🇺🇸 机场推荐:dafei.de 美国 27
+  type: vmess
+  server: 172.64.145.93
+  port: 443
+  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: guanwang.awsno.com
+  network: ws
+  ws-opts:
+    path: /hls/cctv5phd.m3u8
+    headers:
+      Host: guanwang.awsno.com
+- name: 🇺🇸 机场推荐:dafei.de 美国 30
   type: vmess
   server: www.shopify.com
   port: 443
@@ -3889,21 +3617,7 @@ proxies:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
-- name: 🇺🇸 机场推荐:dafei.de 美国 31
-  type: vmess
-  server: 104.18.42.163
-  port: 443
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: guanwang.awsno.com
-  network: ws
-  ws-opts:
-    path: /hls/cctv5phd.m3u8
-    headers:
-      Host: guanwang.awsno.com
-- name: 🇺🇸 机场推荐:dafei.de 美国 35
+- name: 🇺🇸 机场推荐:dafei.de 美国 34
   type: vmess
   server: 188.114.99.137
   port: 443
@@ -3917,186 +3631,141 @@ proxies:
     path: /hls/cctv5phd.m3u8
     headers:
       Host: guanwang.awsno.com
-- name: 🇺🇸 机场推荐:dafei.de 美国 46
+- name: 🇺🇸 机场推荐:dafei.de 美国 45
   type: vless
   server: 162.35.101.177
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   encryption: none
-- name: 🇺🇸 机场推荐:dafei.de 美国 57
+- name: 🇺🇸 机场推荐:dafei.de 美国 56
   type: socks5
   server: 216.132.114.194
   port: 62000
   username: dXRkcjh3dnM6N2kxZGhlZzY=
   password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 59
-  type: vless
-  server: 196.245.52.187
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-- name: 🇺🇸 机场推荐:dafei.de 美国 67
-  type: hysteria2
-  server: starlink-ft.251313.xyz
-  port: 443
-  password: https%3A%2F%2Fxship.2fa.cat
-  sni: xship.top
-- name: 🇺🇸 机场推荐:dafei.de 美国 68
+- name: 🇺🇸 机场推荐:dafei.de 美国 65
   type: socks5
   server: 69.55.49.177
   port: 38182
   username: Ok5vbmU=
   password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 71
+- name: 🇺🇸 机场推荐:dafei.de 美国 67
   type: socks5
   server: 66.253.2.69
   port: 62000
   username: dV9yYjFkYmEyOmwxdGxyZHg1MnY=
   password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 73
-  type: socks5
-  server: 23.230.200.157
-  port: 62000
-  username: dXcydTh5c2k6dWNsaXJwOXY=
-  password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 74
+- name: 🇺🇸 机场推荐:dafei.de 美国 69
   type: socks5
   server: 69.17.68.66
   port: 62000
   username: dV9yZjkxN2E3OjVsMDAzbzZtdjM=
   password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 75
-  type: socks5
-  server: 23.230.200.154
-  port: 62000
-  username: dXR6YzJxZWw6bnBuem0xdTE=
-  password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 76
+- name: 🇺🇸 机场推荐:dafei.de 美国 70
   type: socks5
   server: 216.132.114.27
   port: 62000
   username: Snp1ZmlKNjI6NzViUG9SY0I=
   password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 77
+- name: 🇺🇸 机场推荐:dafei.de 美国 71
   type: socks5
   server: 216.132.114.182
   port: 62000
   username: dV9yZjZiYTg3OnIxNzAzMDU3YXM=
   password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 84
+- name: 🇺🇸 机场推荐:dafei.de 美国 78
   type: socks5
   server: 104.168.249.36
   port: 1080
   username: dGVzdDEyMzp0ZXN0MTIz
   password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 86
+- name: 🇺🇸 机场推荐:dafei.de 美国 80
   type: socks5
   server: 23.230.200.250
   port: 62000
   username: a2luZ3N0YXIxMjM6a2luZ3N0YXIxMjMrKw==
   password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 88
-  type: socks5
-  server: 23.230.200.95
-  port: 62000
-  username: dXFjY2hwbHU6cnZsdHFxeHk=
-  password: ''
-- name: 🇺🇸 机场推荐:dafei.de 美国 91
-  type: trojan
-  server: ipfast.kingmna.com
-  port: 443
-  password: SiFvGI5bX01GGtGOJ2_nxA
-  sni: cdn.akamai.steamstatic.com
-- name: 🇺🇸 机场推荐:dafei.de 美国 92
-  type: vless
-  server: 35295cx.us8.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  encryption: none
-- name: 🇺🇸 机场推荐:dafei.de 美国 97
-  type: vless
-  server: perplexity.com
-  port: 443
-  uuid: f7a9b27c-fd3c-4177-9f66-8be4dd726d0b
-  encryption: none
-  tls: true
-  servername: rainman.exploring.cyou
-  flow: xtls-rprx-vision
-  network: ws
-  ws-opts:
-    path: /t.me-SubGift
-    headers:
-      Host: rainman.exploring.cyou
-- name: 🇺🇸 机场推荐:dafei.de 美国 98
+- name: 🇺🇸 机场推荐:dafei.de 美国 85
   type: vless
   server: 84.32.54.237
   port: 443
   uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
   encryption: none
-- name: 🇺🇸 机场推荐:dafei.de 美国 99
-  type: vless
-  server: 89.124.251.243
-  port: 443
-  uuid: 2208b003-78b1-453c-b5ca-ce847ff0efd6
-  encryption: none
+- name: 🇺🇸 机场推荐:dafei.de 美国 90
+  type: socks5
+  server: 45.61.188.134
+  port: 44499
+  username: Og==
+  password: ''
+- name: 🇺🇸 机场推荐:dafei.de 美国 94
+  type: socks5
+  server: 47.251.166.203
+  port: 1080
+  username: Og==
+  password: ''
 - name: 🇳🇱 机场推荐:dafei.de 荷兰 26
   type: vless
   server: 196.196.148.85
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   encryption: none
-- name: 🇳🇱 机场推荐:dafei.de 荷兰 29
+- name: 🇳🇱 机场推荐:dafei.de 荷兰 28
   type: vless
   server: 196.196.148.63
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   encryption: none
-- name: 🇳🇱 机场推荐:dafei.de 荷兰 30
+- name: 🇳🇱 机场推荐:dafei.de 荷兰 29
   type: vless
   server: 196.245.52.183
   port: 443
   uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
   encryption: none
-- name: 🇳🇱 机场推荐:dafei.de 荷兰 33
+- name: 🇳🇱 机场推荐:dafei.de 荷兰 32
   type: vless
   server: 196.196.148.76
   port: 443
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   encryption: none
   flow: xtls-rprx-vision
-- name: 🇳🇱 机场推荐:dafei.de 荷兰 34
-  type: vless
-  server: 8a2e72t.nl11.h1clayd.click
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-  encryption: none
-  flow: xtls-rprx-vision
-- name: 🇳🇱 机场推荐:dafei.de 荷兰 35
-  type: socks5
-  server: 185.145.99.41
-  port: 1080
-  username: dGVzdDEyMzp0ZXN0MTIz
-  password: ''
-- name: 🇳🇱 机场推荐:dafei.de 荷兰 36
+- name: 🇳🇱 机场推荐:dafei.de 荷兰 33
   type: vless
   server: 185.14.29.29
   port: 443
   uuid: 6b1607f1-3a08-4681-8abd-83663a8155e7
   encryption: none
-- name: 🇳🇱 机场推荐:dafei.de 荷兰 37
+- name: 🇳🇱 机场推荐:dafei.de 荷兰 34
   type: vless
   server: 136.148.208.221
   port: 443
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   encryption: none
   flow: xtls-rprx-vision
-- name: 🇯🇵 机场推荐:dafei.de 日本 02
-  type: socks5
-  server: 101.36.104.46
-  port: 10808
-  username: Og==
-  password: ''
-- name: 🇯🇵 机场推荐:dafei.de 日本 05
+- name: 🇳🇱 机场推荐:dafei.de 荷兰 35
+  type: hysteria2
+  server: 77.90.15.183
+  port: 8964
+  password: HATATEAYA
+  sni: ganlanc.at
+- name: 🇳🇱 机场推荐:dafei.de 荷兰 36
+  type: vless
+  server: 191.217.206.147
+  port: 6443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  encryption: none
+- name: 🇳🇱 机场推荐:dafei.de 荷兰 37
+  type: trojan
+  server: alireza.karamoz1.ir
+  port: 443
+  password: poimnap
+  sni: alireza.karamoz1.ir
+- name: 🇳🇱 机场推荐:dafei.de 荷兰 38
+  type: vless
+  server: 89.251.22.59
+  port: 20721
+  uuid: 04261321-8725-4d03-a502-704656b0cb8a
+  encryption: none
+- name: 🇯🇵 机场推荐:dafei.de 日本 04
   type: socks5
   server: 103.248.150.50
   port: 42000
@@ -4108,38 +3777,32 @@ proxies:
   port: 1080
   username: dWZDb2JoeWR6NFdkOkpkRmxyWmhxSFA=
   password: ''
-- name: 🇭🇰 机场推荐:dafei.de 香港 02
-  type: socks5
-  server: 47.243.173.50
-  port: 11211
-  username: MTExOjExMQ==
-  password: ''
-- name: 🇭🇰 机场推荐:dafei.de 香港 04
+- name: 🇭🇰 机场推荐:dafei.de 香港 03
   type: socks5
   server: 47.76.186.28
   port: 11408
   username: MTExOjExMQ==
   password: ''
-- name: 🇭🇰 机场推荐:dafei.de 香港 05
+- name: 🇭🇰 机场推荐:dafei.de 香港 04
   type: socks5
   server: 47.243.225.10
   port: 8888
   username: MTIzOjEyMw==
   password: ''
-- name: 🇭🇰 机场推荐:dafei.de 香港 08
+- name: 🇭🇰 机场推荐:dafei.de 香港 07
   type: socks5
   server: 47.242.19.215
   port: 8899
   username: YWRtaW46YWRtaW4=
   password: ''
-- name: 🇫🇷 机场推荐:dafei.de 法国 15
+- name: 🇫🇷 机场推荐:dafei.de 法国 13
   type: vless
   server: 163.245.42.87
   port: 443
   uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f
   encryption: none
   flow: xtls-rprx-vision
-- name: 🇫🇷 机场推荐:dafei.de 法国 17
+- name: 🇫🇷 机场推荐:dafei.de 法国 15
   type: vless
   server: edge.bookmai.com
   port: 443
@@ -4147,45 +3810,35 @@ proxies:
   encryption: none
   flow: xtls-rprx-vision
 - name: 🇫🇷 机场推荐:dafei.de 法国 18
-  type: vless
-  server: 167.82.64.7
-  port: 443
-  uuid: XpnTeam-131
-  encryption: none
-  tls: true
-  servername: cdn.akamai.steamstatic.com
+  type: socks5
+  server: 144.56.22.78
+  port: 42000
+  username: TDh3UDNrUXg6Wm41bVI3dkE=
+  password: ''
 - name: 🇸🇪 机场推荐:dafei.de 瑞典 05
   type: vless
   server: 88.216.60.73
   port: 443
   uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
   encryption: none
-- name: 🇸🇪 机场推荐:dafei.de 瑞典 06
+- name: 🇹🇷 机场推荐:dafei.de 土耳其 02
   type: vless
-  server: 88.216.214.159
-  port: 443
-  uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
+  server: 87.76.154.28
+  port: 57231
+  uuid: c34a41b6-598f-46ac-bea3-8b39a906f922
   encryption: none
-- name: 🇸🇪 机场推荐:dafei.de 瑞典 07
+- name: 🇹🇷 机场推荐:dafei.de 土耳其 03
   type: vless
-  server: perplexity.com
-  port: 443
-  uuid: 628347a0-6582-4202-9aa8-2eaa8140dc25
+  server: gold.jafarghasemiturkk.ir
+  port: 8080
+  uuid: 4f9f03f9-39e9-4879-8f10-0eccf859aafd
   encryption: none
-  tls: true
-  servername: new.exploring.cyou
   flow: xtls-rprx-vision
   network: ws
   ws-opts:
-    path: /t.me-SubGift
+    path: /
     headers:
-      Host: new.exploring.cyou
-- name: 🇨🇿 机场推荐:dafei.de 捷克 05
-  type: vless
-  server: czechia.richforever.ru
-  port: 443
-  uuid: 3dbd9377-43cc-46c3-b32c-2605908024eb
-  encryption: none
+      Host: gold.jafarghasemiturkk.ir
 - name: 🇲🇽 机场推荐:dafei.de 墨西哥 02
   type: socks5
   server: 144.225.47.8
@@ -4234,6 +3887,13 @@ proxies:
   port: 1080
   username: ODg4ODo4ODg4
   password: ''
+- name: 🇸🇬 机场推荐:dafei.de 新加坡 08
+  type: vless
+  server: free.fugui.lol
+  port: 51283
+  uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7
+  encryption: none
+  flow: xtls-rprx-vision
 - name: 🇨🇭 机场推荐:dafei.de 瑞士 04
   type: vmess
   server: 179.43.140.24
@@ -4244,42 +3904,43 @@ proxies:
   network: tcp
 - name: 🇵🇱 机场推荐:dafei.de 波兰 05
   type: vless
-  server: 130.78.31.25
-  port: 443
-  uuid: 146d567c-6335-4e63-a8aa-7ec068642440
-  encryption: none
-- name: 🇵🇱 机场推荐:dafei.de 波兰 08
-  type: vless
   server: 80.47.10.106
   port: 443
   uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c
   encryption: none
-- name: 🇪🇸 机场推荐:dafei.de 西班牙 05
+- name: 🇵🇱 机场推荐:dafei.de 波兰 06
   type: vless
-  server: 196.196.149.81
-  port: 443
-  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  server: 191.217.206.147
+  port: 7443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
   encryption: none
-  flow: xtls-rprx-vision
-- name: 🇪🇸 机场推荐:dafei.de 西班牙 06
+- name: 🇪🇸 机场推荐:dafei.de 西班牙 05
   type: vless
   server: 196.196.149.80
   port: 443
   uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
   encryption: none
+- name: 🇪🇸 机场推荐:dafei.de 西班牙 06
+  type: vless
+  server: 196.196.148.90
+  port: 443
+  uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
+  encryption: none
+  flow: xtls-rprx-vision
 - name: 🇧🇷 机场推荐:dafei.de 巴西 02
   type: socks5
   server: 191.7.129.133
   port: 62000
   username: dXdyZ2Zrd2c6MG12cnQ1amI=
   password: ''
-- name: 🇨🇾 机场推荐:dafei.de 塞浦路斯 02
+- name: 🇧🇬 机场推荐:dafei.de 保加利亚 04
   type: vless
-  server: 194.55.167.133
-  port: 443
-  uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
+  server: plaindune.com
+  port: 8443
+  uuid: 37af0181-5598-4aad-a040-d926bcb65757
   encryption: none
-  flow: xtls-rprx-vision
+  tls: true
+  servername: plaindune.com
 - name: 🇳🇬 机场推荐:dafei.de 尼日利亚 01
   type: trojan
   server: sclass-c2.catcat321.com
@@ -4370,6 +4031,12 @@ proxies:
   port: 62000
   username: a3M4Nzg0NDkyNjBkOllsUm9XdkUwZExfY1VxUzk0d1BlS25BNA==
   password: ''
+- name: 🇹🇭 机场推荐:dafei.de 泰国 13
+  type: socks5
+  server: 103.14.164.202
+  port: 42000
+  username: cm91dGUxNjRKSWEyQ0JQeGZ5OlZBd3lKUVgwaUtNSml5Q3c1VVZLOXdHSA==
+  password: ''
 - name: 🇻🇳 机场推荐:dafei.de 越南 01
   type: socks5
   server: 103.184.113.190
@@ -4382,60 +4049,44 @@ proxies:
   port: 62000
   username: cVQ0NkRaTHY6akhzSzJncXM=
   password: ''
-- name: nl|e1f5|puddincat07@Telegram
-  type: ss
-  server: 202.50.253.63
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: nl|b8af|puddincat07@Telegram
-  type: ss
-  server: 202.50.253.81
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: nl|f92b|puddincat07@Telegram
-  type: ss
-  server: 202.50.253.27
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: nl|2d27|puddincat07@Telegram
-  type: ss
-  server: 202.50.253.99
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: nl|8e6f|puddincat07@Telegram
-  type: ss
-  server: 202.50.253.72
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: nl|bc46|puddincat07@Telegram
-  type: ss
-  server: 202.50.253.54
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: nl|6a01|puddincat07@Telegram
-  type: ss
-  server: 202.50.253.18
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: nl|1cc0|puddincat07@Telegram
-  type: ss
-  server: 202.50.253.36
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: nl|468f|puddincat07@Telegram
-  type: ss
-  server: 202.50.253.45
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇫🇮 机场推荐:dafei.de 芬兰 01
+  type: vless
+  server: 198.202.24.142
+  port: 2083
+  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
+  encryption: none
+  tls: true
+  servername: vipfree.dr-ping.ir
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: vipfree.dr-ping.ir
+- name: 🇫🇮 机场推荐:dafei.de 芬兰 02
+  type: vless
+  server: 191.217.206.147
+  port: 9443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  encryption: none
+- name: 🇫🇮 机场推荐:dafei.de 芬兰 03
+  type: vless
+  server: 191.217.206.147
+  port: 443
+  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
+  encryption: none
+- name: 🇫🇮 机场推荐:dafei.de 芬兰 04
+  type: vless
+  server: 2.26.191.219
+  port: 443
+  uuid: 955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6
+  encryption: none
+  flow: xtls-rprx-vision
+- name: 🇵🇭 机场推荐:dafei.de 菲律宾 01
+  type: socks5
+  server: 103.18.230.88
+  port: 42000
+  username: dXY0b2FrZzU6czZhMWozOHE=
+  password: ''
 - name: nl|5013|puddincat07@Telegram
   type: ss
   server: 202.50.253.90
@@ -4464,268 +4115,256 @@ proxy-groups:
 - name: PROXY
   type: select
   proxies: &id001
+  - 🇩🇪[openproxylist.com] vless-DE
+  - 🏳[openproxylist.com] vmess-
   - 🇸🇪[openproxylist.com] vless-SE
   - 🇩🇪[openproxylist.com] trojan-DE
-  - 🇹🇷[openproxylist.com] vless-TR
-  - 🇧🇷[openproxylist.com] vmess-BR
-  - 🇺🇸[openproxylist.com] ss-US
-  - 🇪🇸[openproxylist.com] vless-ES
-  - 🇭🇰[openproxylist.com] vless-HK
-  - 🇩🇪[openproxylist.com] vless-DE
-  - 🇫🇷[openproxylist.com] ss-FR
-  - 🇫🇮[openproxylist.com] vless-FI
   - 🇮🇹[openproxylist.com] ss-IT
   - 🏳[openproxylist.com] vless-
   - 🇳🇱[openproxylist.com] ss-NL
   - 🇳🇱[openproxylist.com] vless-NL
-  - 🇸🇪[openproxylist.com] vless-SE-1
-  - 🏳[openproxylist.com] trojan-
-  - 🇺🇸[openproxylist.com] vmess-US
-  - 🇷🇺[openproxylist.com] vless-RU
-  - 🏳[openproxylist.com] vmess-
-  - 🇳🇱[openproxylist.com] ss-NL-1
-  - 🇨🇦[openproxylist.com] vless-CA
-  - 🇷🇺[openproxylist.com] vless-RU-1
-  - 🇧🇷[openproxylist.com] vmess-BR-1
-  - 🇫🇮[openproxylist.com] ss-FI
-  - 🇭🇰[openproxylist.com] ss-HK
-  - 🇬🇧[openproxylist.com] ss-GB
   - 🏳[openproxylist.com] vless--1
-  - 🇰🇷[openproxylist.com] trojan-KR
-  - 🏳[openproxylist.com] ss-
-  - 🇺🇸[openproxylist.com] ss-US-1
-  - 🇳🇱[openproxylist.com] vless-NL-1
-  - 🏳[openproxylist.com] vless--2
+  - 🇭🇰[openproxylist.com] trojan-HK
+  - 🏳[openproxylist.com] vmess--1
+  - 🇷🇺[openproxylist.com] vless-RU
+  - 🇳🇱[openproxylist.com] ss-NL-1
+  - 🇷🇺[openproxylist.com] vless-RU-1
+  - 🇭🇰[openproxylist.com] ss-HK
+  - 🇩🇪[openproxylist.com] vless-DE-1
+  - 🇬🇧[openproxylist.com] ss-GB
+  - 🏳[openproxylist.com] trojan-
+  - 🇺🇸[openproxylist.com] ss-US
+  - 🇸🇬[openproxylist.com] vless-SG
   - 🇮🇹[openproxylist.com] ss-IT-1
+  - 🏳[openproxylist.com] ss-
   - 🇮🇹[openproxylist.com] ss-IT-2
   - 🇮🇹[openproxylist.com] ss-IT-3
   - 🇮🇹[openproxylist.com] ss-IT-4
-  - 🏳[openproxylist.com] ss--1
   - 🇮🇹[openproxylist.com] ss-IT-5
+  - 🏳[openproxylist.com] ss--1
   - 🇮🇹[openproxylist.com] ss-IT-6
-  - 🇮🇹[openproxylist.com] ss-IT-7
-  - 🇮🇹[openproxylist.com] ss-IT-8
-  - 🇮🇹[openproxylist.com] ss-IT-9
   - 🏳[openproxylist.com] ss--2
-  - 🇸🇬[openproxylist.com] trojan-SG
-  - 🇺🇸[openproxylist.com] ss-US-2
-  - 🏳[openproxylist.com] vless--3
-  - 🇨🇦[openproxylist.com] vless-CA-1
+  - 🇮🇹[openproxylist.com] ss-IT-7
   - 🇳🇱[openproxylist.com] ss-NL-2
-  - 🇺🇸[openproxylist.com] ss-US-3
+  - 🇸🇬[openproxylist.com] trojan-SG
+  - 🇺🇸[openproxylist.com] ss-US-1
+  - 🇳🇱[openproxylist.com] ss-NL-3
+  - 🏳[openproxylist.com] ss--3
   - 🇨🇭[openproxylist.com] ss-CH
-  - 🇫🇷[openproxylist.com] ss-FR-1
-  - 🇩🇪[openproxylist.com] ss-DE
+  - 🇫🇷[openproxylist.com] ss-FR
+  - 🏳[openproxylist.com] ss--4
   - 🇸🇬[openproxylist.com] ss-SG
   - 🇬🇧[openproxylist.com] ss-GB-1
   - 🇬🇧[openproxylist.com] ss-GB-2
-  - 🇺🇸[openproxylist.com] ss-US-4
+  - 🇺🇸[openproxylist.com] ss-US-2
   - 🇸🇬[openproxylist.com] ss-SG-1
-  - 🇸🇪[openproxylist.com] ss-SE
-  - 🏳[openproxylist.com] ss--3
-  - 🇩🇪[openproxylist.com] ss-DE-1
-  - 🇸🇬[openproxylist.com] ss-SG-2
-  - 🇫🇷[openproxylist.com] ss-FR-2
-  - 🇨🇭[openproxylist.com] ss-CH-1
-  - 🇸🇬[openproxylist.com] ss-SG-3
-  - 🇬🇧[openproxylist.com] ss-GB-3
-  - 🇫🇷[openproxylist.com] ss-FR-3
-  - 🇪🇸[openproxylist.com] ss-ES
-  - 🇫🇷[openproxylist.com] ss-FR-4
-  - 🇪🇸[openproxylist.com] ss-ES-1
-  - 🇨🇭[openproxylist.com] ss-CH-2
-  - 🇫🇷[openproxylist.com] ss-FR-5
-  - 🇩🇪[openproxylist.com] ss-DE-2
-  - 🇩🇪[openproxylist.com] ss-DE-3
-  - 🏳[openproxylist.com] ss--4
-  - 🇬🇧[openproxylist.com] ss-GB-4
-  - 🇸🇬[openproxylist.com] ss-SG-4
   - 🏳[openproxylist.com] ss--5
-  - 🇸🇪[openproxylist.com] vless-SE-2
-  - 🏳[openproxylist.com] trojan--1
-  - 🇦🇹[openproxylist.com] ss-AT
+  - 🇸🇪[openproxylist.com] ss-SE
   - 🏳[openproxylist.com] ss--6
   - 🏳[openproxylist.com] ss--7
-  - 🇪🇪[openproxylist.com] vless-EE
-  - 🏳[openproxylist.com] trojan--2
-  - 🇨🇭[openproxylist.com] trojan-CH
-  - 🏳[openproxylist.com] trojan--3
-  - 🇨🇦[openproxylist.com] trojan-CA
-  - 🏳[openproxylist.com] trojan--4
-  - 🇩🇪[openproxylist.com] trojan-DE-1
-  - 🏳[openproxylist.com] trojan--5
-  - 🇨🇦[openproxylist.com] trojan-CA-1
-  - 🇩🇪[openproxylist.com] trojan-DE-2
-  - 🏳[openproxylist.com] trojan--6
-  - 🇪🇸[openproxylist.com] trojan-ES
-  - 🇦🇺[openproxylist.com] trojan-AU
-  - 🇪🇸[openproxylist.com] trojan-ES-1
-  - 🇪🇸[openproxylist.com] trojan-ES-2
-  - 🇺🇸[openproxylist.com] trojan-US
-  - 🏳[openproxylist.com] vless--4
-  - 🏳[openproxylist.com] vless--5
-  - 🇻🇳[openproxylist.com] vless-VN
-  - 🇫🇷[openproxylist.com] vless-FR
-  - 🏳[openproxylist.com] vless--6
-  - 🇬🇧[openproxylist.com] ss-GB-5
-  - 🇧🇾[openproxylist.com] vless-BY
-  - 🇮🇳[openproxylist.com] vless-IN
-  - 🏳[openproxylist.com] vless--7
-  - 🇫🇮[openproxylist.com] vless-FI-1
-  - 🇦🇪[openproxylist.com] vless-AE
-  - 🇮🇹[openproxylist.com] ss-IT-10
-  - 🇺🇸[openproxylist.com] vmess-US-1
   - 🏳[openproxylist.com] ss--8
-  - 🏳[openproxylist.com] vmess--1
-  - 🇲🇽[openproxylist.com] ss-MX
+  - 🇺🇸[openproxylist.com] ss-US-3
+  - 🇺🇸[openproxylist.com] ss-US-4
+  - 🇫🇷[openproxylist.com] ss-FR-1
   - 🏳[openproxylist.com] ss--9
+  - 🇸🇬[openproxylist.com] ss-SG-2
+  - 🏳[openproxylist.com] ss--10
+  - 🇫🇷[openproxylist.com] ss-FR-2
+  - 🇪🇸[openproxylist.com] ss-ES
+  - 🇫🇷[openproxylist.com] ss-FR-3
+  - 🇪🇸[openproxylist.com] ss-ES-1
+  - 🏳[openproxylist.com] ss--11
+  - 🇫🇷[openproxylist.com] ss-FR-4
+  - 🇩🇪[openproxylist.com] ss-DE
+  - 🏳[openproxylist.com] ss--12
+  - 🇪🇸[openproxylist.com] ss-ES-2
+  - 🇬🇧[openproxylist.com] ss-GB-3
+  - 🇸🇬[openproxylist.com] ss-SG-3
+  - 🇫🇷[openproxylist.com] ss-FR-5
+  - 🇺🇸[openproxylist.com] ss-US-5
+  - 🏳[openproxylist.com] vless--2
+  - 🇦🇹[openproxylist.com] ss-AT
+  - 🇳🇱[openproxylist.com] ss-NL-4
+  - 🏳[openproxylist.com] ss--13
+  - 🇳🇱[openproxylist.com] trojan-NL
+  - 🏳[openproxylist.com] trojan--1
+  - 🇺🇸[openproxylist.com] trojan-US
+  - 🇨🇭[openproxylist.com] trojan-CH
+  - 🇰🇷[openproxylist.com] vmess-KR
+  - 🇩🇪[openproxylist.com] trojan-DE-1
+  - 🇦🇺[openproxylist.com] trojan-AU
+  - 🇺🇸[openproxylist.com] trojan-US-1
+  - 🇰🇷[openproxylist.com] vless-KR
+  - 🏳[openproxylist.com] vless--3
+  - 🏳[openproxylist.com] vless--4
+  - 🇬🇧[openproxylist.com] ss-GB-4
+  - 🏳[openproxylist.com] vless--5
+  - 🏳[openproxylist.com] vless--6
+  - 🇫🇮[openproxylist.com] vless-FI
+  - 🇦🇪[openproxylist.com] vless-AE
+  - 🇮🇹[openproxylist.com] ss-IT-8
+  - 🏳[openproxylist.com] ss--14
+  - 🇷🇺[openproxylist.com] vless-RU-2
+  - 🇳🇱[openproxylist.com] ss-NL-5
+  - 🇲🇽[openproxylist.com] ss-MX
   - 🇨🇦[openproxylist.com] ss-CA
   - 🇨🇦[openproxylist.com] ss-CA-1
   - 🇨🇦[openproxylist.com] ss-CA-2
-  - 🇨🇦[openproxylist.com] ss-CA-3
-  - 🇮🇹[openproxylist.com] ss-IT-11
+  - 🏳[openproxylist.com] ss--15
   - 🇲🇾[openproxylist.com] trojan-MY
-  - 🇨🇦[openproxylist.com] ss-CA-4
-  - 🇨🇦[openproxylist.com] ss-CA-5
-  - 🏳[openproxylist.com] ss--10
-  - 🇬🇧[openproxylist.com] vless-GB
-  - 🇨🇦[openproxylist.com] ss-CA-6
-  - 🏳[openproxylist.com] ss--11
-  - 🇬🇧[openproxylist.com] ss-GB-6
-  - 🇨🇦[openproxylist.com] vmess-CA
-  - 🇯🇵[openproxylist.com] vmess-JP
-  - 🏳[openproxylist.com] ss--12
-  - 🏳[openproxylist.com] ss--13
-  - 🇺🇸[openproxylist.com] vmess-US-2
-  - 🇫🇷[openproxylist.com] vless-FR-1
-  - 🇬🇧[openproxylist.com] ss-GB-7
-  - 🇳🇴[openproxylist.com] ss-NO
+  - 🇱🇻[openproxylist.com] vless-LV
   - 🇯🇵[openproxylist.com] ss-JP
-  - 香港+阿里云
-  - 波兰+V2CROSS.COM
-  - 西班牙+V2CROSS.COM
-  - 英国+V2CROSS.COM
-  - 台湾省台北市+中华电信
-  - 香港+葵兴数据中心
-  - 台湾省台北市+中华电信-1
-  - 立陶宛+V2CROSS.COM
-  - 🇺🇸US-95.215.201.18-0063
-  - 🇺🇸US-193.151.163.18-0060
-  - 🇺🇸US-45.86.51.18-0110
-  - 🇺🇸US-185.230.230.18-0059
-  - 🇺🇸US-167.88.61.52-0253
-  - 🇺🇸US-193.151.160.9-0061
-  - 🇺🇸US-169.197.142.68-0104
-  - 🇺🇸US-193.151.160.18-0062
-  - 🇺🇸US-173.244.56.6-0254
-  - 🇺🇸US-216.106.186.33-0133
-  - 🇳🇱NL-193.29.139.168-5081
-  - 🇬🇧GB-82.38.31.194-5226
-  - 🇺🇸US-84.20.27.183-0087
-  - 🇬🇧GB-82.38.31.189-0084
-  - 🇬🇧GB-82.38.31.180-0089
-  - 🇺🇸US-38.22.17.129-0140
-  - 🇬🇧GB-82.38.31.217-0251
-  - 🇦🇺AU-45.63.30.142-0102
-  - 🇺🇸US-172.111.36.123-0113
-  - 🇺🇸US-38.121.43.225-0103
-  - 🇬🇧GB-82.38.31.206-0172
-  - 🇬🇧GB-82.38.31.181-0080
-  - 🇺🇸US-137.184.89.151-0173
-  - 🇺🇸US-167.88.63.99-0100
-  - 🇬🇧GB-82.38.31.212-0068
-  - 🇬🇧GB-82.38.31.210-0067
-  - 🇬🇧GB-82.38.31.214-0073
-  - 🇳🇱NL-193.29.139.147-0075
-  - 🇬🇧GB-82.38.31.208-5227
-  - 🇺🇸US-38.121.43.18-0117
-  - 🇺🇸US-38.22.17.219-0105
-  - 🇩🇪DE-193.108.119.15-0481
-  - 🇺🇸US-167.88.62.203-0108
-  - 🇬🇧GB-82.38.31.190-0072
-  - 🇺🇸US-38.121.43.231-0162
-  - 🇬🇧GB-82.38.31.216-0074
-  - 🇨🇱CL-64.176.7.205-0082
-  - 🇺🇸US-216.106.178.169-0095
-  - 🇬🇧GB-82.38.31.207-0083
-  - 🇬🇧GB-82.38.31.205-0081
-  - 🇺🇸US-38.128.66.32-0092
-  - 🇧🇷BR-216.238.104.154-0099
-  - 🇺🇸US-149.40.57.138-0094
-  - 🇬🇧GB-82.38.31.179-0085
-  - 🇺🇸US-37.19.198.243-5282
-  - 🇺🇸US-66.163.112.121-0088
-  - 🇸🇬SG-149.88.106.73-0165
-  - 🇺🇸US-162.251.62.31-0101
-  - 🇰🇷KR-158.247.253.243-0116
-  - 🇺🇸US-149.40.57.133-0122
-  - 🇺🇸US-172.111.38.72-0136
-  - 🇳🇱NL-109.201.152.181-0144
-  - 🇯🇵JP-149.22.87.241-0148
-  - 🇺🇸US-38.91.100.39-0131
-  - 🇨🇦CA-137.184.174.93-0130
-  - 🇸🇬SG-68.183.227.4-0158
-  - 🇳🇱NL-158.173.20.171-5204
-  - 🇬🇧GB-146.70.61.37-0120
-  - 🇬🇧GB-82.38.31.62-0154
-  - 🇬🇧GB-82.38.31.48-0155
-  - 🇬🇧GB-82.38.31.162-0157
-  - 🇬🇧GB-178.83.185.156-0142
-  - 🇬🇧GB-82.38.31.49-0147
-  - 🇬🇧GB-82.38.31.47-0149
-  - 🇯🇵JP-149.22.87.240-0448
-  - 🇬🇧GB-82.38.31.35-0159
-  - 🇬🇧GB-82.38.31.61-0150
-  - 🇬🇧GB-82.38.31.46-0161
-  - 🇬🇧GB-82.38.31.66-0151
-  - 🇰🇷KR-218.237.185.234-0180
-  - 🇰🇷KR-211.178.105.134-0185
-  - 🇬🇧GB-82.38.31.187-0076
-  - 🇬🇧GB-82.38.31.199-0192
-  - 🇬🇧GB-82.38.31.203-0111
-  - 🇪🇸ES-5.188.181.201-0241
-  - 🇬🇧GB-82.38.31.218-0188
-  - 🇫🇷FR-145.239.55.210-0190
-  - 🇺🇸US-15.204.247.206-0175
-  - 🇪🇸ES-5.188.181.201-0207
-  - 🇪🇸ES-5.188.181.201-5211
-  - 🇪🇸ES-5.188.181.201-5214
-  - 🇪🇸ES-5.188.181.201-5208
-  - 🇪🇸ES-5.188.181.201-0215
-  - 🇪🇸ES-5.188.181.201-0218
-  - 🇯🇵JP-168.138.205.100-0204
-  - 🇨🇭CH-208.69.78.33-0202
-  - 🇪🇸ES-5.188.181.201-0210
-  - 🇪🇸ES-5.188.181.201-0208
-  - 🇨🇦CA-51.79.64.198-0404
-  - 🇬🇧GB-82.38.31.219-0160
-  - 🇨🇦CA-15.235.57.6-0247
-  - 🇪🇸ES-5.188.181.201-0209
-  - 🇺🇸US-198.98.53.130-0222
-  - 🇺🇸US-156.146.38.169-0223
-  - 🇺🇸US-156.146.38.168-0213
-  - 🇺🇸US-156.146.38.167-0206
-  - 🇬🇧GB-141.98.101.182-5083
-  - 🇺🇸US-156.146.38.170-0181
-  - 🇺🇸US-157.254.38.210-0226
-  - 🇺🇸US-157.254.38.210-0231
-  - 🇬🇧GB-141.98.101.179-0198
-  - 🇭🇰HK-95.40.108.216-0235
-  - 🇬🇧GB-141.98.101.178-0432
-  - 🇺🇸US-157.254.38.210-0234
-  - 🇸🇬SG-15.235.184.127-0225
-  - 🇬🇧GB-141.98.101.181-0249
-  - 🇭🇰HK-156.245.232.239-0236
-  - 🇬🇧GB-82.38.31.192-0091
-  - 🇬🇧GB-82.38.31.184-0086
-  - 🇬🇧GB-82.38.31.191-0079
-  - 🇬🇧GB-82.38.31.186-0077
-  - 🇳🇱NL-193.29.139.223-0071
-  - 🇬🇧GB-82.38.31.193-0069
-  - 🇬🇧GB-82.38.31.202-0065
-  - 🇬🇧GB-82.38.31.176-0205
-  - 🇨🇳CN-113.31.124.147-0058
-  - 🇭🇰HK-159.100.206.88-0052
+  - 🇺🇸[openproxylist.com] vless-US
+  - 🇨🇦[openproxylist.com] ss-CA-3
+  - 🏳[openproxylist.com] ss--16
+  - 🇳🇱[openproxylist.com] ss-NL-6
+  - 🏳[openproxylist.com] ss--17
+  - 🏳[openproxylist.com] ss--18
+  - 🇰🇿[openproxylist.com] vless-KZ
+  - 🏳[openproxylist.com] ss--19
+  - 🇿🇦[openproxylist.com] ss-ZA
+  - 🇫🇷[openproxylist.com] vless-FR
+  - 🇰🇷[openproxylist.com] vmess-KR-1
+  - 🇫🇷[openproxylist.com] vless-FR-1
+  - 🇬🇧[openproxylist.com] ss-GB-5
+  - 🏳[openproxylist.com] ss--20
+  - 🇩🇪[openproxylist.com] vless-DE-2
+  - 🏳[openproxylist.com] ss--21
+  - 🏳[openproxylist.com] vmess--2
+  - 🏳[openproxylist.com] ss--22
+  - 🇯🇵[openproxylist.com] ss-JP-1
+  - 🏳[openproxylist.com] ss--23
+  - 🏳[openproxylist.com] ss--24
+  - 🇬🇧[openproxylist.com] ss-GB-6
+  - 🇺🇸[openproxylist.com] ss-US-6
+  - 🏳[openproxylist.com] ss--25
+  - 新西兰+V2CROSS.COM
+  - 新西兰+V2CROSS.COM-1
+  - 新西兰+V2CROSS.COM-2
+  - 新西兰+V2CROSS.COM-3
+  - 新西兰+V2CROSS.COM-4
+  - 新西兰+V2CROSS.COM-5
+  - 🇺🇸US-193.151.163.18-0054
+  - 🇺🇸US-37.19.198.236-5704
+  - 🇺🇸US-193.151.160.9-0058
+  - 🇺🇸US-37.19.198.160-5702
+  - 🇺🇸US-193.151.160.18-0060
+  - 🇬🇧GB-82.38.31.208-0091
+  - 🇬🇧GB-82.38.31.194-0065
+  - 🇬🇧GB-82.38.31.216-0099
+  - 🇬🇧GB-82.38.31.190-0097
+  - 🇬🇧GB-82.38.31.212-0084
+  - 🇺🇸US-185.230.230.18-0056
+  - 🇬🇧GB-82.38.31.202-0245
+  - 🇬🇧GB-82.38.31.210-0087
+  - 🇳🇱NL-193.29.139.168-0063
+  - 🇬🇧GB-82.38.31.193-0244
+  - 🇬🇧GB-82.38.31.214-0089
+  - 🇳🇱NL-193.29.139.147-0090
+  - 🇬🇧GB-82.38.31.187-0169
+  - 🇬🇧GB-82.38.31.192-0238
+  - 🇮🇹IT-202.50.253.54-0161
+  - 🇬🇧GB-82.38.31.217-0074
+  - 🇬🇧GB-82.38.31.206-0078
+  - 🇬🇧GB-82.38.31.205-0104
+  - 🇬🇧GB-82.38.31.207-0103
+  - 🇬🇧GB-82.38.31.186-0241
+  - 🇬🇧GB-82.38.31.184-0239
+  - 🇬🇧GB-82.38.31.180-0071
+  - 🇳🇱NL-193.29.139.223-0243
+  - 🇺🇸US-84.20.27.183-0067
+  - 🇬🇧GB-82.38.31.189-0069
+  - 🇬🇧GB-82.38.31.179-0117
+  - 🇺🇸US-37.19.198.243-0118
+  - 🇨🇱CL-64.176.7.205-0100
+  - 🇮🇹IT-202.50.253.45-0178
+  - 🇧🇷BR-216.238.104.154-0108
+  - 🇺🇸US-149.40.57.138-0116
+  - 🇬🇧GB-82.38.31.191-0240
+  - 🇮🇹IT-202.50.253.18-0138
+  - 🇺🇸US-38.121.43.231-0098
+  - 🇺🇸US-167.88.62.203-0095
+  - 🇺🇸US-38.121.43.18-0092
+  - 🇮🇹IT-202.50.253.36-0203
+  - 🇺🇸US-172.111.38.72-0128
+  - 🇺🇸US-172.111.36.123-0076
+  - 🇺🇸US-38.22.17.219-0093
+  - 🇺🇸US-66.163.112.121-0119
+  - 🇺🇸US-38.128.66.32-0106
+  - 🇩🇪DE-193.108.119.96-0482
+  - 🇬🇧GB-146.70.61.37-0144
+  - 🇦🇺AU-45.63.30.142-0075
+  - 🇺🇸US-216.106.186.33-0062
+  - 🇺🇸US-45.86.51.18-0055
+  - 🇺🇸US-38.91.100.39-0137
+  - 🇺🇸US-167.88.61.52-0057
+  - 🇺🇸US-173.244.56.9-5711
+  - 🇺🇸US-149.40.57.133-0125
+  - 🇺🇸US-95.215.201.18-0053
+  - 🇮🇹IT-202.50.253.63-0143
+  - 🇨🇦CA-149.22.95.183-5757
+  - 🇸🇬SG-149.88.106.73-0122
+  - 🇺🇸US-173.244.56.6-0061
+  - 🇺🇸US-216.106.178.169-0101
+  - 🇨🇦CA-137.184.174.93-0140
+  - 🇰🇷KR-158.247.253.243-0124
+  - 🇳🇱NL-158.173.20.171-0142
+  - 🇺🇸US-38.121.43.225-0077
+  - 🇬🇧GB-82.38.31.62-0147
+  - 🇺🇸US-169.197.142.68-0059
+  - 🇬🇧GB-178.83.185.156-0150
+  - 🇬🇧GB-82.38.31.48-0148
+  - 🇬🇧GB-82.38.31.47-0153
+  - 🇬🇧GB-82.38.31.49-0152
+  - 🇬🇧GB-82.38.31.35-0155
+  - 🇬🇧GB-82.38.31.162-0149
+  - 🇳🇱NL-109.201.152.181-0133
+  - 🇬🇧GB-82.38.31.66-0160
+  - 🇬🇧GB-82.38.31.61-0156
+  - 🇨🇦CA-15.235.57.6-0200
+  - 🇭🇰HK-213.176.92.148-0164
+  - 🇬🇧GB-82.38.31.199-0173
+  - 🏁RELAY-172.64.229.21-1066
+  - 🇺🇸US-15.204.247.206-0180
+  - 🇯🇵JP-168.138.205.100-0193
+  - 🇪🇸ES-5.188.181.201-5751
+  - 🇫🇷FR-145.239.55.210-0179
+  - 🇬🇧GB-82.38.31.219-0199
+  - 🇪🇸ES-5.188.181.201-5749
+  - 🇯🇵JP-168.138.43.75-1052
+  - 🇨🇦CA-51.222.200.165-0183
+  - 🇪🇸ES-5.188.181.201-0187
+  - 🇨🇦CA-51.79.85.185-0181
+  - 🇪🇸ES-5.188.181.201-0192
+  - 🇪🇸ES-5.188.181.201-0190
+  - 🇬🇧GB-82.38.31.176-0246
+  - 🇪🇸ES-5.188.181.201-0188
+  - 🇨🇭CH-208.69.78.33-0195
+  - 🇫🇷FR-107.161.160.28-0516
+  - 🇰🇷KR-218.237.185.234-0162
+  - 🇬🇧GB-141.98.101.179-0219
+  - 🇬🇧GB-141.98.101.182-0214
+  - 🇨🇦CA-51.79.64.198-0198
+  - 🇬🇧GB-82.38.31.218-0177
+  - 🇯🇵JP-168.138.205.100-0194
+  - 🇺🇸US-156.146.38.170-0215
+  - 🇺🇸US-156.146.38.168-0212
+  - 🇺🇸US-198.98.53.130-0209
+  - 🇩🇪DE-109.176.202.74-0541
+  - 🇺🇸US-156.146.38.169-0211
+  - 🇺🇸US-157.254.38.210-0216
+  - 🇰🇷KR-211.178.105.134-0165
+  - 🇭🇰HK-156.245.232.239-0227
+  - 🇪🇸ES-5.188.181.201-0196
+  - 🇪🇸ES-5.188.181.201-0189
+  - 🇪🇸ES-5.188.181.201-0201
+  - 🇪🇸ES-5.188.181.201-0185
+  - 🇪🇸ES-5.188.181.201-0184
+  - 🇫🇷FR-51.83.61.102-0205
+  - 🇪🇸ES-5.188.181.201-0176
+  - 🇫🇷FR-51.77.144.182-0207
+  - 🇸🇬SG-68.183.227.4-0141
+  - 🇩🇪DE-193.108.119.15-0094
   - 🇺🇲16@exclavevpn
   - 🇱🇹 15@exclavevpn
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
@@ -4742,7 +4381,7 @@ proxy-groups:
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
   - '@ConfigV2RayNG'
   - 🔹69@oneclickvpnkeys
-  - 🇩🇪 德国 | DEU
+  - 🔹66@oneclickvpnkeys
   - 🩵+@Azarakhsh_Proxy+🩷
   - '@v2ray313 کانالمون 😀'
   - Telegram@vpnjey
@@ -4763,111 +4402,97 @@ proxy-groups:
   - 🔹13@oneclickvpnkeys
   - 🇯🇵218802 | ⚡️Telegram = t.me/L...
   - '@confiig_hub #1'
-  - 🇺🇸 美国 | USA 6
+  - '@iranping24'
   - 'Telegram@vpnjey #7'
   - 'Telegram@vpnjey #8'
   - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
   - 🇦🇱[www.v2nodes.com] vless-AL-1...
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
-  - 🇦🇺[www.v2nodes.com] vless-AU-1...
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
+  - '🏳[www.v2nodes.com] vless- #1'
+  - 🇨🇦[www.v2nodes.com] vless-CA-1...
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #1'
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #2'
+  - 🇸🇬[www.v2nodes.com] vless-SG-8...
+  - '🇨🇦[www.v2nodes.com] vless-CA-1... #3'
   - '🇨🇦[www.v2nodes.com] vless-CA-1... #4'
-  - '🇨🇦[www.v2nodes.com] vless-CA-1... #5'
   - 🇸🇬[www.v2nodes.com] vless-SG
-  - 🇨🇭[www.v2nodes.com] vless-CH-1...
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #1'
-  - '🇨🇭[www.v2nodes.com] vless-CH-1... #2'
+  - 🇨🇦[www.v2nodes.com] vless-CA
+  - 🇸🇬[www.v2nodes.com] vless-SG-7...
   - 🇨🇿[www.v2nodes.com] vless-CZ-1...
   - '🇨🇿[www.v2nodes.com] vless-CZ-1... #1'
   - 🇩🇪[www.v2nodes.com] vless-DE-1...
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #1'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #2'
   - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - '🏳[www.v2nodes.com] vless- #1'
   - '🏳[www.v2nodes.com] vless- #3'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #6'
-  - 🇪🇸[www.v2nodes.com] vless-ES-1...
   - '🏳[www.v2nodes.com] vless- #4'
-  - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
+  - 🇩🇰[www.v2nodes.com] vless-DK-1...
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
   - '🏳[www.v2nodes.com] vless- #5'
-  - '🏳[www.v2nodes.com] vless- #6'
-  - 🇨🇦[www.v2nodes.com] vless-CA
+  - '🇪🇸[www.v2nodes.com] vless-ES-1... #1'
   - 🇫🇮[www.v2nodes.com] vless-FI-1...
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #1'
   - '🇫🇮[www.v2nodes.com] vless-FI-1... #2'
-  - '🇫🇮[www.v2nodes.com] vless-FI-1... #4'
   - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #2'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #4'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #3'
   - '🇫🇷[www.v2nodes.com] vless-FR-1... #5'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #6'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #7'
-  - '🇫🇷[www.v2nodes.com] vless-FR-1... #9'
   - 🇬🇧[www.v2nodes.com] vless-GB-1...
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #1'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #2'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #3'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #4'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #5'
   - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
-  - '🇬🇧[www.v2nodes.com] vless-GB-1... #7'
-  - 🇬🇷[www.v2nodes.com] vless-GR-1...
-  - '🇭🇰 香港 | HKG #1'
+  - 🇭🇰[www.v2nodes.com] vless-HK-1...
   - '🇭🇰[www.v2nodes.com] vless-HK-1... #1'
   - 🇮🇳[www.v2nodes.com] vless-IN-1...
-  - '🇮🇳[www.v2nodes.com] vless-IN-1... #2'
+  - '🇮🇳[www.v2nodes.com] vless-IN-1... #1'
   - 🇮🇷[www.v2nodes.com] vless-IR-1...
   - '🇮🇷[www.v2nodes.com] vless-IR-1... #1'
   - '🇮🇷[www.v2nodes.com] vless-IR-1... #2'
   - '🇮🇷[www.v2nodes.com] vless-IR-1... #3'
   - 🇮🇹[www.v2nodes.com] vless-IT-1...
-  - '🇮🇹[www.v2nodes.com] vless-IT-1... #1'
-  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
   - 🇯🇵[www.v2nodes.com] vless-JP-1...
   - '🇯🇵[www.v2nodes.com] vless-JP-1... #1'
-  - '🇸🇬[www.v2nodes.com] vless-SG #1'
-  - '🇰🇷[www.v2nodes.com] vless-KR-1... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG #3'
+  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
   - 🇰🇿[www.v2nodes.com] vless-KZ-1...
-  - '🏳[www.v2nodes.com] vless- #7'
+  - '🏳[www.v2nodes.com] vless- #6'
   - 🇲🇾[www.v2nodes.com] vless-MY-1...
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #1'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #3'
-  - '🏳[www.v2nodes.com] vless- #8'
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
   - '🇳🇱[www.v2nodes.com] vless-NL-1... #4'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🏳[www.v2nodes.com] vless- #8'
   - '🏳[www.v2nodes.com] vless- #9'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #7'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #8'
-  - '🇳🇱[www.v2nodes.com] vless-NL-1... #9'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
   - 🇵🇱[www.v2nodes.com] vless-PL-1...
-  - '🇵🇱 波兰 | POL #1'
+  - '🏳[www.v2nodes.com] vless- #10'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - '🏳[www.v2nodes.com] vless- #11'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #3'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #4'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #5'
   - '🇵🇱[www.v2nodes.com] vless-PL-1... #6'
-  - '🏳[www.v2nodes.com] vless- #12'
+  - '🏳[www.v2nodes.com] vless- #11'
   - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - 🇸🇦[www.v2nodes.com] vless-SA-1...
-  - 🇸🇪[www.v2nodes.com] vless-SE-1...
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #1'
   - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #5'
   - 🇸🇬[www.v2nodes.com] vless-SG-1...
-  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - '🏳[www.v2nodes.com] vless- #12'
   - '🏳[www.v2nodes.com] vless- #13'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - 🇸🇬[www.v2nodes.com] vless-SG-4...
+  - 🇸🇬[www.v2nodes.com] vless-SG-3...
+  - 🇸🇬[www.v2nodes.com] vless-SG-2...
+  - '🇸🇬[www.v2nodes.com] vless-SG-2... #1'
   - '🏳[www.v2nodes.com] vless- #14'
   - '🇸🇬[www.v2nodes.com] vless-SG-1... #3'
-  - 🇸🇬[www.v2nodes.com] vless-SG-9...
-  - 🇸🇬[www.v2nodes.com] vless-SG-8...
-  - 🇸🇬[www.v2nodes.com] vless-SG-7...
-  - '🏳[www.v2nodes.com] vless- #16'
-  - 🇸🇬[www.v2nodes.com] vless-SG-4...
   - 🇹🇭[www.v2nodes.com] vless-TH-1...
-  - '🏳[www.v2nodes.com] vless- #17'
+  - 🇹🇷[www.v2nodes.com] vless-TR-1...
+  - '🏳[www.v2nodes.com] vless- #15'
   - 🇹🇼[www.v2nodes.com] vless-TW-1...
   - 🇺🇦[www.v2nodes.com] vless-UA-1...
   - 🇺🇸[www.v2nodes.com] vless-US-1...
@@ -4875,21 +4500,27 @@ proxy-groups:
   - '🇺🇸[www.v2nodes.com] vless-US-1... #2'
   - '🇺🇸[www.v2nodes.com] vless-US-1... #3'
   - '🇺🇸[www.v2nodes.com] vless-US-1... #4'
-  - '🏳[www.v2nodes.com] vless- #18'
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #5'
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #6'
-  - '🏳[www.v2nodes.com] vless- #19'
-  - '🏳[www.v2nodes.com] vless- #20'
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #7'
-  - '🇺🇸[www.v2nodes.com] vless-US-1... #8'
-  - 🇩🇪DE_6|2.3MB/s
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - 🇨🇦[www.v2nodes.com] ss-CA-1546...
+  - '🇨🇦[www.v2nodes.com] ss-CA-1546... #1'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
   - 🇩🇪[www.v2nodes.com] ss-DE-1622...
-  - '🏳[www.v2nodes.com] ss- #15'
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
-  - 🇷🇺[www.v2nodes.com] ss-RU-1163...
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🏳[www.v2nodes.com] ss- #11'
+  - 🇺🇸[www.v2nodes.com] ss-US-1612...
   - 🇧🇷[www.v2nodes.com] trojan-BR-...
+  - 🇨🇦[www.v2nodes.com] trojan-CA-...
+  - '🏳[www.v2nodes.com] trojan- #1'
+  - '🇨🇦[www.v2nodes.com] trojan-CA-... #2'
+  - '🇨🇦[www.v2nodes.com] trojan-CA-... #3'
+  - '🇨🇭[www.v2nodes.com] trojan-CH-... #4'
+  - '🇩🇪[www.v2nodes.com] trojan-DE-... #1'
+  - '🏳[www.v2nodes.com] trojan- #4'
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #3'
+  - '🏳[www.v2nodes.com] trojan- #6'
+  - '🇪🇸[www.v2nodes.com] trojan-ES-... #2'
   - '🇳🇬[www.v2nodes.com] trojan-NG-... #1'
-  - 🇹🇷[www.v2nodes.com] trojan-TR-...
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - 日本|@ripaojiedian
   - 美国4|@ripaojiedian
   - 法国|@ripaojiedian
@@ -4899,74 +4530,61 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 美国3|@ripaojiedian
   - 美国5|@ripaojiedian
+  - '🇩🇪 德国 | DEU #7'
+  - '🇩🇪 德国 | DEU #1'
   - '🇩🇪 德国 | DEU #2'
+  - '🇩🇪 德国 | DEU #3'
   - '🇩🇪 德国 | DEU #4'
+  - '🇩🇪 德国 | DEU #5'
   - '🇩🇪 德国 | DEU #6'
   - '🇩🇪 德国 | DEU #8'
   - '🇩🇪 德国 | DEU #9'
-  - '🇩🇪 德国 | DEU #12'
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #6'
-  - '🇸🇪 瑞典 | SWE #2'
-  - '🇸🇪 瑞典 | SWE #3'
-  - 🇺🇸 美国 | USA 2
-  - '🇺🇸 美国 | USA #4'
-  - 🇳🇱NL_3|1.8MB/s
-  - 🇩🇪DE_4|1.6MB/s
-  - 🇩🇪DE_5|1.6MB/s
-  - 🇫🇮FI_5|1.1MB/s
-  - socks5
-  - socks5-1
-  - socks5-2
-  - socks5-3
-  - 🇳🇱NL_10|1.1MB/s
-  - 🇳🇱NL_11|2.9MB/s
-  - socks5-4
-  - 🇳🇱NL_12|1.6MB/s
-  - 🇫🇮FI_6|2.7MB/s
-  - socks5-5
-  - socks5-6
-  - 🇩🇪DE_10|2.6MB/s
-  - 🇦🇲AM_1|1.7MB/s
-  - 🇩🇪DE_11|2.7MB/s
-  - 🇮🇹IT_8|3.3MB/s
-  - 🇸🇪SE_1|1.2MB/s
-  - 🇺🇸US_7|3.5MB/s
-  - '🇦🇱 AL_21 #1'
-  - 🇦🇱 AL_22
-  - '🇦🇱 AL_23 #1'
-  - '🇩🇪 德国 | DEU #3'
-  - '🇩🇪 德国 | DEU #5'
-  - '🇩🇪 德国 | DEU #7'
   - '🇩🇪 德国 | DEU #10'
-  - '🇩🇪 德国 | DEU #11'
+  - 🇩🇪 德国 | DEU 11
+  - 🇩🇪 德国 | DEU 12
   - '🇩🇪 德国 | DEU #13'
-  - 🇩🇪 德国 | DEU 14
+  - '🇩🇪 德国 | DEU #14'
+  - '🇩🇪 德国 | DEU #15'
+  - '🇩🇪 德国 | DEU #16'
+  - '🇩🇪 德国 | DEU #17'
+  - '🇩🇪 德国 | DEU #18'
+  - '🇩🇪 德国 | DEU #19'
   - '🇪🇪 爱沙尼亚 | EST #1'
+  - '🇫🇷 法国 | FRA #1'
   - '🇬🇧 英国 | GBR #1'
+  - '🇭🇰 香港 | HKG #2'
   - '🇰🇷 韩国 | KOR #2'
-  - '🇰🇷 韩国 | KOR #3'
-  - '🇳🇬 尼日利亚 | NGA #1'
+  - '🇳🇱 荷兰 | NLD #1'
   - '🇳🇱 荷兰 | NLD #2'
   - '🇳🇱 荷兰 | NLD #3'
-  - '🇳🇱 荷兰 | NLD #4'
+  - 🇳🇱 荷兰 | NLD 4
   - '🇳🇱 荷兰 | NLD #5'
-  - '🇳🇱 荷兰 | NLD #7'
+  - '🇵🇱 波兰 | POL #1'
   - 🇷🇺 俄罗斯 | RUS
-  - '🇷🇺 俄罗斯 | RUS #3'
+  - 🇷🇺 俄罗斯 | RUS 3
+  - '🇸🇪 瑞典 | SWE #1'
+  - '🇸🇪 瑞典 | SWE #2'
+  - '🇸🇪 瑞典 | SWE #3'
   - '🇸🇪 瑞典 | SWE #4'
   - '🇸🇪 瑞典 | SWE #5'
+  - '🇸🇪 瑞典 | SWE #6'
+  - '🇸🇪 瑞典 | SWE #7'
+  - 🇸🇪 瑞典 | SWE 8
+  - '🇸🇪 瑞典 | SWE #9'
   - '🇸🇬 新加坡 | SGP #2'
-  - '🇹🇷 土耳其 | TUR #1'
-  - '🇺🇸 美国 | USA #1'
+  - '🇺🇸 美国 | USA #2'
+  - 🇺🇸 美国 | USA 4
   - '🇺🇸 美国 | USA #5'
-  - '🇺🇸 美国 | USA #8'
-  - '🇦🇱 AL_22 #1'
-  - '🇩🇪 德国 | DEU #1'
+  - '🇺🇸 美国 | USA #6'
+  - '🇩🇪 德国 | DEU #11'
+  - '🇩🇪 德国 | DEU #12'
+  - '🇳🇱 荷兰 | NLD #4'
   - '🇷🇺 俄罗斯 | RUS #1'
   - '🇷🇺 俄罗斯 | RUS #2'
-  - '🇺🇸 美国 | USA #2'
-  - '🇺🇸 美国 | USA #6'
+  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - '🇸🇪 瑞典 | SWE #8'
+  - '🇺🇸 美国 | USA #4'
   - AT_speednode_0001
   - BR_speednode_0003
   - RU_speednode_0034
@@ -4975,51 +4593,46 @@ proxy-groups:
   - 🇩🇪 机场推荐:dafei.de 德国 24
   - 🇩🇪 机场推荐:dafei.de 德国 26
   - 🇩🇪 机场推荐:dafei.de 德国 27
+  - 🇩🇪 机场推荐:dafei.de 德国 28
+  - 🇩🇪 机场推荐:dafei.de 德国 29
   - 🇺🇸 机场推荐:dafei.de 美国 03
+  - 🇺🇸 机场推荐:dafei.de 美国 13
   - 🇺🇸 机场推荐:dafei.de 美国 27
-  - 🇺🇸 机场推荐:dafei.de 美国 31
-  - 🇺🇸 机场推荐:dafei.de 美国 35
-  - 🇺🇸 机场推荐:dafei.de 美国 46
-  - 🇺🇸 机场推荐:dafei.de 美国 57
-  - 🇺🇸 机场推荐:dafei.de 美国 59
+  - 🇺🇸 机场推荐:dafei.de 美国 30
+  - 🇺🇸 机场推荐:dafei.de 美国 34
+  - 🇺🇸 机场推荐:dafei.de 美国 45
+  - 🇺🇸 机场推荐:dafei.de 美国 56
+  - 🇺🇸 机场推荐:dafei.de 美国 65
   - 🇺🇸 机场推荐:dafei.de 美国 67
-  - 🇺🇸 机场推荐:dafei.de 美国 68
+  - 🇺🇸 机场推荐:dafei.de 美国 69
+  - 🇺🇸 机场推荐:dafei.de 美国 70
   - 🇺🇸 机场推荐:dafei.de 美国 71
-  - 🇺🇸 机场推荐:dafei.de 美国 73
-  - 🇺🇸 机场推荐:dafei.de 美国 74
-  - 🇺🇸 机场推荐:dafei.de 美国 75
-  - 🇺🇸 机场推荐:dafei.de 美国 76
-  - 🇺🇸 机场推荐:dafei.de 美国 77
-  - 🇺🇸 机场推荐:dafei.de 美国 84
-  - 🇺🇸 机场推荐:dafei.de 美国 86
-  - 🇺🇸 机场推荐:dafei.de 美国 88
-  - 🇺🇸 机场推荐:dafei.de 美国 91
-  - 🇺🇸 机场推荐:dafei.de 美国 92
-  - 🇺🇸 机场推荐:dafei.de 美国 97
-  - 🇺🇸 机场推荐:dafei.de 美国 98
-  - 🇺🇸 机场推荐:dafei.de 美国 99
+  - 🇺🇸 机场推荐:dafei.de 美国 78
+  - 🇺🇸 机场推荐:dafei.de 美国 80
+  - 🇺🇸 机场推荐:dafei.de 美国 85
+  - 🇺🇸 机场推荐:dafei.de 美国 90
+  - 🇺🇸 机场推荐:dafei.de 美国 94
   - 🇳🇱 机场推荐:dafei.de 荷兰 26
+  - 🇳🇱 机场推荐:dafei.de 荷兰 28
   - 🇳🇱 机场推荐:dafei.de 荷兰 29
-  - 🇳🇱 机场推荐:dafei.de 荷兰 30
+  - 🇳🇱 机场推荐:dafei.de 荷兰 32
   - 🇳🇱 机场推荐:dafei.de 荷兰 33
   - 🇳🇱 机场推荐:dafei.de 荷兰 34
   - 🇳🇱 机场推荐:dafei.de 荷兰 35
   - 🇳🇱 机场推荐:dafei.de 荷兰 36
   - 🇳🇱 机场推荐:dafei.de 荷兰 37
-  - 🇯🇵 机场推荐:dafei.de 日本 02
-  - 🇯🇵 机场推荐:dafei.de 日本 05
+  - 🇳🇱 机场推荐:dafei.de 荷兰 38
+  - 🇯🇵 机场推荐:dafei.de 日本 04
   - 🇮🇹 机场推荐:dafei.de 意大利 15
-  - 🇭🇰 机场推荐:dafei.de 香港 02
+  - 🇭🇰 机场推荐:dafei.de 香港 03
   - 🇭🇰 机场推荐:dafei.de 香港 04
-  - 🇭🇰 机场推荐:dafei.de 香港 05
-  - 🇭🇰 机场推荐:dafei.de 香港 08
+  - 🇭🇰 机场推荐:dafei.de 香港 07
+  - 🇫🇷 机场推荐:dafei.de 法国 13
   - 🇫🇷 机场推荐:dafei.de 法国 15
-  - 🇫🇷 机场推荐:dafei.de 法国 17
   - 🇫🇷 机场推荐:dafei.de 法国 18
   - 🇸🇪 机场推荐:dafei.de 瑞典 05
-  - 🇸🇪 机场推荐:dafei.de 瑞典 06
-  - 🇸🇪 机场推荐:dafei.de 瑞典 07
-  - 🇨🇿 机场推荐:dafei.de 捷克 05
+  - 🇹🇷 机场推荐:dafei.de 土耳其 02
+  - 🇹🇷 机场推荐:dafei.de 土耳其 03
   - 🇲🇽 机场推荐:dafei.de 墨西哥 02
   - 🇲🇽 机场推荐:dafei.de 墨西哥 03
   - 🇲🇽 机场推荐:dafei.de 墨西哥 04
@@ -5028,13 +4641,14 @@ proxy-groups:
   - 🇲🇽 机场推荐:dafei.de 墨西哥 07
   - 🇲🇽 机场推荐:dafei.de 墨西哥 08
   - 🇸🇬 机场推荐:dafei.de 新加坡 02
+  - 🇸🇬 机场推荐:dafei.de 新加坡 08
   - 🇨🇭 机场推荐:dafei.de 瑞士 04
   - 🇵🇱 机场推荐:dafei.de 波兰 05
-  - 🇵🇱 机场推荐:dafei.de 波兰 08
+  - 🇵🇱 机场推荐:dafei.de 波兰 06
   - 🇪🇸 机场推荐:dafei.de 西班牙 05
   - 🇪🇸 机场推荐:dafei.de 西班牙 06
   - 🇧🇷 机场推荐:dafei.de 巴西 02
-  - 🇨🇾 机场推荐:dafei.de 塞浦路斯 02
+  - 🇧🇬 机场推荐:dafei.de 保加利亚 04
   - 🇳🇬 机场推荐:dafei.de 尼日利亚 01
   - 🇳🇬 机场推荐:dafei.de 尼日利亚 02
   - 🇳🇬 机场推荐:dafei.de 尼日利亚 03
@@ -5050,17 +4664,14 @@ proxy-groups:
   - 🇹🇭 机场推荐:dafei.de 泰国 10
   - 🇹🇭 机场推荐:dafei.de 泰国 11
   - 🇹🇭 机场推荐:dafei.de 泰国 12
+  - 🇹🇭 机场推荐:dafei.de 泰国 13
   - 🇻🇳 机场推荐:dafei.de 越南 01
   - 🇻🇳 机场推荐:dafei.de 越南 03
-  - nl|e1f5|puddincat07@Telegram
-  - nl|b8af|puddincat07@Telegram
-  - nl|f92b|puddincat07@Telegram
-  - nl|2d27|puddincat07@Telegram
-  - nl|8e6f|puddincat07@Telegram
-  - nl|bc46|puddincat07@Telegram
-  - nl|6a01|puddincat07@Telegram
-  - nl|1cc0|puddincat07@Telegram
-  - nl|468f|puddincat07@Telegram
+  - 🇫🇮 机场推荐:dafei.de 芬兰 01
+  - 🇫🇮 机场推荐:dafei.de 芬兰 02
+  - 🇫🇮 机场推荐:dafei.de 芬兰 03
+  - 🇫🇮 机场推荐:dafei.de 芬兰 04
+  - 🇵🇭 机场推荐:dafei.de 菲律宾 01
   - nl|5013|puddincat07@Telegram
   - xx|14f5|puddincat07@Telegram
   - sg|9317|puddincat07@Telegram
