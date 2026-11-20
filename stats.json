@@ -1,17 +1,17 @@
 {
-  "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt": 124,
-  "https://raw.githubusercontent.com/pawdroid/Free-servers/main/sub": 6,
+  "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY_RAW.txt": 150,
+  "https://raw.githubusercontent.com/pawdroid/Free-servers/main/sub": 12,
   "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity": 200,
-  "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt": 367,
-  "https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray": 110,
+  "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt": 347,
+  "https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray": 109,
   "https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml": 14,
   "https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml (skipped)": 2,
-  "reachable": 563,
-  "filtered_unreachable": 47,
+  "reachable": 566,
+  "filtered_unreachable": 68,
   "udp_kept_unfiltered": 45,
-  "unparsable_removed": 17,
-  "total_raw": 821,
-  "unique": 563,
-  "clash_proxies": 561,
-  "clash_skipped": 2
+  "unparsable_removed": 18,
+  "total_raw": 832,
+  "unique": 566,
+  "clash_proxies": 563,
+  "clash_skipped": 3
 }
